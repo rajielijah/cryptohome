@@ -67,23 +67,29 @@ class ProfileScreen extends StatelessWidget {
                               'Ben Tom',
                               style: TextStyle(
                                   color: Colors.white,
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 20),
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 25, fontFamily: 'Montserrat'),
                             ),
                             Text(
                               'Bentom@gmail.com',
-                              style: TextStyle(color: Colors.white),
+                              style: TextStyle(color: kPrimaryColor,                                  
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 17, fontFamily: 'Montserrat'),
                             ),
                             Text(
                               '+2341 9977118',
                               style: TextStyle(
-                                color: Colors.white,
+                                color: kPrimaryColor,                                
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 17, fontFamily: 'Montserrat'
                               ),
                             )
                           ],
                         ),
                       ),
                     ),
+                    Positioned(left: 30, top: 40, child: SvgPicture.asset('assets/images/vector9.svg')),
+                  
                   ],
                 ),
               ),
