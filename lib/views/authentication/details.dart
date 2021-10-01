@@ -3,8 +3,8 @@ import 'package:cryptohome/constant/validator.dart';
 import 'package:cryptohome/views/authentication/sign_up.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class DetailsScreen extends StatelessWidget {
+  const DetailsScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,23 +26,43 @@ class LoginScreen extends StatelessWidget {
               borderSide: new BorderSide(color: Colors.white)),
           focusedBorder: OutlineInputBorder(),
         ));
-    final passwordField = TextFormField(
-      autofocus: false,
-      obscureText: true,
-      
-      // onSaved: (value) => _password = value,
-      validator: (value) => value!.isEmpty ? "Please enter password" : null,
-      maxLines: 1,
-      minLines: 1,
-      decoration: InputDecoration(
-        fillColor: Colors.white,
-        // hintStyle: TextStyle(color:Colors.white),
-        labelText: 'Password',
-        labelStyle: TextStyle(color:Colors.white),
-        errorBorder:
-            OutlineInputBorder(borderSide: new BorderSide(color: Colors.white)),
-      ),
-    );
+       final firstNameField = TextFormField(
+        autofocus: false,
+        maxLines: 1,
+        // validator: validateEmail,
+        // onSaved: (value) => _email = value,
+        minLines: 1,
+        decoration: InputDecoration(
+          labelText: 'First name',
+           labelStyle: TextStyle(color:Colors.white),
+          contentPadding:
+              new EdgeInsets.symmetric(vertical: 0, horizontal: 1.0),
+         enabledBorder: OutlineInputBorder(
+           borderSide: BorderSide(color:Colors.white)
+         ),
+          errorBorder: OutlineInputBorder(
+              borderSide: new BorderSide(color: Colors.white)),
+          focusedBorder: OutlineInputBorder(),
+        ));
+       final lastNameField = TextFormField(
+        autofocus: false,
+        maxLines: 1,
+        // validator: validateEmail,
+        // onSaved: (value) => _email = value,
+        minLines: 1,
+        decoration: InputDecoration(
+          labelText: 'Last name',
+           labelStyle: TextStyle(color:Colors.white),
+          contentPadding:
+              new EdgeInsets.symmetric(vertical: 0, horizontal: 1.0),
+         enabledBorder: OutlineInputBorder(
+           borderSide: BorderSide(color:Colors.white)
+         ),
+          errorBorder: OutlineInputBorder(
+              borderSide: new BorderSide(color: Colors.white)),
+          focusedBorder: OutlineInputBorder(),
+        ));
+    
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
@@ -62,7 +82,7 @@ class LoginScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top:58.0),
                 child: Text(
-                  'Sign in',
+                  'Kindly fill in your details',
                   style: TextStyle(
                     fontFamily: 'Montserrat',
                     color: Colors.white,
@@ -74,7 +94,7 @@ class LoginScreen extends StatelessWidget {
               ),
               SizedBox(height:15),
               Text(
-                "Welcome back",
+                "Let's intoduce",
                 style: TextStyle(
                     fontWeight: FontWeight.normal,
                     fontFamily: 'Montserrat',
@@ -84,48 +104,8 @@ class LoginScreen extends StatelessWidget {
               ),
               SizedBox(height: height/5,),
               EmailField,
-              passwordField,
-              SizedBox(height:20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Text(
-                      'No account yet?',
-                      style: TextStyle(
-                          color: Colors.grey[400],
-                          fontFamily: 'Montserrat',
-                          fontSize: 14,
-                          fontWeight: FontWeight.normal),
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    GestureDetector(
-                        child: Text(
-                          'Sign up',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Montserrat',
-                              decoration: TextDecoration.underline,
-                              fontSize: 17,
-                              fontWeight: FontWeight.w300),
-                        ),
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (BuildContext context) =>
-                                      SignUp()));
-                        }),
-                        Text('Forgot password?', 
-                         style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Montserrat',
-                              // decoration: TextDecoration.underline,
-                              fontSize: 17,
-                              fontWeight: FontWeight.w300))
-                  ],
-                ),
+              firstNameField,
+              lastNameField,
                 SizedBox(height: height/7,),
                 Row(
                   children: [

@@ -8,25 +8,24 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final EmailField = TextFormField(
-        autofocus: false,
-        maxLines: 1,
-        // validator: validateEmail,
-        // onSaved: (value) => _email = value,
-        minLines: 1,
-        decoration: InputDecoration(
-          labelText: 'Email',
-           labelStyle: TextStyle(color:Colors.white),
-          contentPadding:
-              new EdgeInsets.symmetric(vertical: 0, horizontal: 1.0),
-         enabledBorder: OutlineInputBorder(
-           borderSide: BorderSide(color:Colors.white)
-         ),
-          errorBorder: OutlineInputBorder(
-              borderSide: new BorderSide(color: Colors.white)),
-          focusedBorder: OutlineInputBorder(),
-        ));
-    final passwordField = TextFormField(
+   final passwordField = TextFormField(
+      autofocus: false,
+      obscureText: true,
+      
+      // onSaved: (value) => _password = value,
+      validator: (value) => value!.isEmpty ? "Please enter password" : null,
+      maxLines: 1,
+      minLines: 1,
+      decoration: InputDecoration(
+        fillColor: Colors.white,
+        // hintStyle: TextStyle(color:Colors.white),
+        labelText: 'Password',
+        labelStyle: TextStyle(color:Colors.white),
+        errorBorder:
+            OutlineInputBorder(borderSide: new BorderSide(color: Colors.white)),
+      ),
+    );
+    final repeatPasswordField = TextFormField(
       autofocus: false,
       obscureText: true,
       
@@ -62,7 +61,7 @@ class LoginScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top:58.0),
                 child: Text(
-                  'Sign in',
+                  'Create your password',
                   style: TextStyle(
                     fontFamily: 'Montserrat',
                     color: Colors.white,
@@ -74,7 +73,7 @@ class LoginScreen extends StatelessWidget {
               ),
               SizedBox(height:15),
               Text(
-                "Welcome back",
+                "Kindly create your password",
                 style: TextStyle(
                     fontWeight: FontWeight.normal,
                     fontFamily: 'Montserrat',
@@ -83,49 +82,8 @@ class LoginScreen extends StatelessWidget {
                     color: Colors.white),
               ),
               SizedBox(height: height/5,),
-              EmailField,
               passwordField,
-              SizedBox(height:20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Text(
-                      'No account yet?',
-                      style: TextStyle(
-                          color: Colors.grey[400],
-                          fontFamily: 'Montserrat',
-                          fontSize: 14,
-                          fontWeight: FontWeight.normal),
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    GestureDetector(
-                        child: Text(
-                          'Sign up',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Montserrat',
-                              decoration: TextDecoration.underline,
-                              fontSize: 17,
-                              fontWeight: FontWeight.w300),
-                        ),
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (BuildContext context) =>
-                                      SignUp()));
-                        }),
-                        Text('Forgot password?', 
-                         style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Montserrat',
-                              // decoration: TextDecoration.underline,
-                              fontSize: 17,
-                              fontWeight: FontWeight.w300))
-                  ],
-                ),
+              repeatPasswordField,
                 SizedBox(height: height/7,),
                 Row(
                   children: [
