@@ -1,6 +1,7 @@
 import 'package:cryptohome/constant/color.dart';
 import 'package:cryptohome/constant/validator.dart';
 import 'package:cryptohome/views/authentication/sign_up.dart';
+import 'package:cryptohome/views/createPassword.dart';
 import 'package:flutter/material.dart';
 
 class DetailsScreen extends StatelessWidget {
@@ -16,15 +17,17 @@ class DetailsScreen extends StatelessWidget {
         minLines: 1,
         decoration: InputDecoration(
           labelText: 'Email',
-           labelStyle: TextStyle(color:Colors.white),
+          floatingLabelBehavior: FloatingLabelBehavior.auto,
+           border: UnderlineInputBorder(  ),
+           labelStyle: TextStyle(color:Colors.white54),
           contentPadding:
               new EdgeInsets.symmetric(vertical: 0, horizontal: 1.0),
-         enabledBorder: OutlineInputBorder(
+         enabledBorder: UnderlineInputBorder(
            borderSide: BorderSide(color:Colors.white)
          ),
-          errorBorder: OutlineInputBorder(
-              borderSide: new BorderSide(color: Colors.white)),
-          focusedBorder: OutlineInputBorder(),
+          focusedBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color:Colors.white)
+          ),
         ));
        final firstNameField = TextFormField(
         autofocus: false,
@@ -34,15 +37,17 @@ class DetailsScreen extends StatelessWidget {
         minLines: 1,
         decoration: InputDecoration(
           labelText: 'First name',
-           labelStyle: TextStyle(color:Colors.white),
+           labelStyle: TextStyle(color:Colors.white54),
           contentPadding:
               new EdgeInsets.symmetric(vertical: 0, horizontal: 1.0),
-         enabledBorder: OutlineInputBorder(
+        enabledBorder: UnderlineInputBorder(
            borderSide: BorderSide(color:Colors.white)
          ),
-          errorBorder: OutlineInputBorder(
-              borderSide: new BorderSide(color: Colors.white)),
-          focusedBorder: OutlineInputBorder(),
+      
+          focusedBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color:Colors.white)
+          ),
+          // focusedBorder: OutlineInputBorder(),
         ));
        final lastNameField = TextFormField(
         autofocus: false,
@@ -52,16 +57,16 @@ class DetailsScreen extends StatelessWidget {
         minLines: 1,
         decoration: InputDecoration(
           labelText: 'Last name',
-           labelStyle: TextStyle(color:Colors.white),
+           labelStyle: TextStyle(color:Colors.white54),
           contentPadding:
               new EdgeInsets.symmetric(vertical: 0, horizontal: 1.0),
-         enabledBorder: OutlineInputBorder(
+        enabledBorder: UnderlineInputBorder(
            borderSide: BorderSide(color:Colors.white)
          ),
-          errorBorder: OutlineInputBorder(
-              borderSide: new BorderSide(color: Colors.white)),
-          focusedBorder: OutlineInputBorder(),
-        ));
+      
+          focusedBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color:Colors.white)
+          ), ));
     
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
@@ -94,22 +99,28 @@ class DetailsScreen extends StatelessWidget {
               ),
               SizedBox(height:15),
               Text(
-                "Let's intoduce",
+                "Let's intoduce you",
                 style: TextStyle(
                     fontWeight: FontWeight.normal,
                     fontFamily: 'Montserrat',
                     fontSize: 16,
                     letterSpacing: 0.9,
-                    color: Colors.white),
+                    color: Colors.white54),
               ),
               SizedBox(height: height/5,),
               EmailField,
+              SizedBox(height: 15,),
               firstNameField,
+              SizedBox(height: 15,),
               lastNameField,
                 SizedBox(height: height/7,),
                 Row(
                   children: [
-                    Icon(Icons.arrow_back, color:Colors.white),
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.pop(context);
+                      },
+                      child: Icon(Icons.arrow_back, color:Colors.white)),
                     SizedBox(width:width/5,),
                     Container(
                       width: 160,
@@ -120,11 +131,7 @@ class DetailsScreen extends StatelessWidget {
                       ),
                         child: GestureDetector(
                           onTap: (){
-                            showModalBottomSheet(
-                              context: context, 
-                              builder: (context){
-                              return FractionallySizedBox();
-                            });
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => CreatePassword()));
                           },
                           child: Icon(Icons.arrow_forward, color:kPrimaryColor)),
                     ),

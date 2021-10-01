@@ -251,7 +251,10 @@ class HomePage extends StatelessWidget {
                          borderRadius: BorderRadius.circular(12),
                          color: kPColor[10]
                       ),
-                      child: Text('TOP COINS', textAlign: TextAlign.center,),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text('TOP COINS', textAlign: TextAlign.center, style: TextStyle(fontWeight: FontWeight.w400, fontFamily: 'Montserrat') ,),
+                      ),
                     ),
                   ),
                   Padding(

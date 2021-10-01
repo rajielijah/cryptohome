@@ -1,10 +1,14 @@
 import 'package:cryptohome/constant/color.dart';
+import 'package:cryptohome/views/authentication/details.dart';
 import 'package:cryptohome/views/authentication/login.dart';
 import 'package:cryptohome/views/nav.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
+import 'package:otp_text_field/otp_field.dart';
+import 'package:otp_text_field/otp_text_field.dart';
+import 'package:otp_text_field/style.dart';
 
 class SignUp extends StatefulWidget {
   @override
@@ -22,6 +26,7 @@ class _SignUpState extends State<SignUp> {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
           child: Form(
         key: formKey,
@@ -34,7 +39,7 @@ class _SignUpState extends State<SignUp> {
             children: [
               Image.asset('assets/images/logoc2.png'),
               Padding(
-                padding: const EdgeInsets.only(left:18.0, right:18),
+                padding: const EdgeInsets.only(left: 18.0, right: 18),
                 child: Text(
                   "Sign up to start",
                   style: TextStyle(
@@ -45,9 +50,11 @@ class _SignUpState extends State<SignUp> {
                       color: Colors.white),
                 ),
               ),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               Padding(
-                padding: const EdgeInsets.only(left:18.0, right:18),
+                padding: const EdgeInsets.only(left: 18.0, right: 18),
                 child: Text(
                   "Let's meet you",
                   style: TextStyle(
@@ -58,7 +65,9 @@ class _SignUpState extends State<SignUp> {
                       color: Colors.white),
                 ),
               ),
-                SizedBox(height: height/4,),
+              SizedBox(
+                height: height / 4,
+              ),
               Padding(
                 padding: const EdgeInsets.all(18.0),
                 child: InternationalPhoneNumberInput(
@@ -80,15 +89,18 @@ class _SignUpState extends State<SignUp> {
                   errorMessage: 'Invalid Phone number',
                   keyboardType: TextInputType.numberWithOptions(
                       signed: true, decimal: true),
-                  // inputBorder: OutlineInputBorder( ),
-                  // inputDecoration: InputDecoration(fillColor: Colors.white),
+                  inputBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.white) ),
+                  
                   textStyle: TextStyle(color: Colors.white),
                   onSaved: (PhoneNumber number) {
                     print('On Saved: $number');
                   },
                 ),
               ),
-              SizedBox(height: height/7,),
+              SizedBox(
+                height: height / 7,
+              ),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -97,33 +109,87 @@ class _SignUpState extends State<SignUp> {
                     width: 130,
                     height: 60,
                     decoration: BoxDecoration(
-                      color: kPrimaryColor[10],
-                      borderRadius: BorderRadius.circular(30)
-                    ),
-                      child: GestureDetector(
-                        onTap: (){
+                        color: kPrimaryColor[10],
+                        borderRadius: BorderRadius.circular(30)),
+                    child: GestureDetector(
+                        onTap: () {
                           showModalBottomSheet(
-                            context: context, 
-                            builder: (context){
-                            return FractionallySizedBox();
-                          });
+                              context: context,
+                              elevation: 20,
+                              builder: (context) {
+                                return Container(
+                                  height: 191,
+                                  width: width,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20)),
+                                  child: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        OTPTextField(
+                                          length: 4,
+                                          width: width / 1.09,
+                                          textFieldAlignment:
+                                              MainAxisAlignment.spaceAround,
+                                          fieldWidth: 64,
+
+                                          // margin: EdgeInsets.symmetric(horizontal:10, vertical:10),
+                                          fieldStyle: FieldStyle.underline,
+                                          outlineBorderRadius: 17,
+
+                                          otpFieldStyle: OtpFieldStyle(
+                                              backgroundColor: kPColor,
+                                              borderColor: kPrimaryColor,
+                                              focusBorderColor: kPColor),
+
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                        SizedBox(height: 15,),
+                                        Text(
+                                            'Please enter the 4 digit code that was sent to you'),
+                                        SizedBox(height: 20),
+                                        Container(
+                                          margin: const EdgeInsets.only(top: 5, left: 15, right: 15),
+                                          alignment: Alignment.center,
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                                          width: 150,
+                                          height: 50,
+                                          decoration: BoxDecoration(
+                                              color: kPrimaryColor,
+                                              borderRadius:
+                                                  BorderRadius.circular(30)),
+                                          child: GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            DetailsScreen()));
+                                              },
+                                              child: Icon(Icons.arrow_forward, color:Colors.white)),
+                                        )
+                                      ]),
+                                );
+                              });
                         },
                         child: Icon(Icons.arrow_forward)),
                   ),
-                  SizedBox(width: 30,),
-                   Container(
-                width: 130,
-                height: 60,
-                decoration: BoxDecoration(
-                  // color: kPrimaryColor[10],
-                   border: Border.all(color: kPColor),
-                  borderRadius: BorderRadius.circular(30)
-                ),
-                  child:  Image.asset('assets/images/search.png', height: height/10,),
-              ),
+                  SizedBox(
+                    width: 30,
+                  ),
+                  Container(
+                    width: 130,
+                    height: 60,
+                    decoration: BoxDecoration(
+                        // color: kPrimaryColor[10],
+                        border: Border.all(color: kPColor),
+                        borderRadius: BorderRadius.circular(30)),
+                    child: Image.asset(
+                      'assets/images/search.png',
+                      height: height / 10,
+                    ),
+                  ),
                 ],
               ),
-              
               Padding(
                 padding: const EdgeInsets.all(18.0),
                 child: Row(
@@ -132,7 +198,7 @@ class _SignUpState extends State<SignUp> {
                     Text(
                       'Have an Account?',
                       style: TextStyle(
-                          color: Colors.grey[50],
+                          color: Colors.grey[500],
                           fontFamily: 'Montserrat',
                           fontSize: 14,
                           fontWeight: FontWeight.normal),
@@ -160,7 +226,6 @@ class _SignUpState extends State<SignUp> {
                   ],
                 ),
               ),
-
             ],
           ),
         ),

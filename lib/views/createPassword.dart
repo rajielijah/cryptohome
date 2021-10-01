@@ -1,10 +1,11 @@
 import 'package:cryptohome/constant/color.dart';
 import 'package:cryptohome/constant/validator.dart';
+import 'package:cryptohome/views/authentication/login.dart';
 import 'package:cryptohome/views/authentication/sign_up.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class CreatePassword extends StatelessWidget {
+  const CreatePassword({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,11 +20,15 @@ class LoginScreen extends StatelessWidget {
       decoration: InputDecoration(
         fillColor: Colors.white,
         // hintStyle: TextStyle(color:Colors.white),
-        labelText: 'Password',
-        labelStyle: TextStyle(color:Colors.white),
-        errorBorder:
-            OutlineInputBorder(borderSide: new BorderSide(color: Colors.white)),
-      ),
+        labelText: 'Enter Password',
+        labelStyle: TextStyle(color:Colors.grey[400]),
+         enabledBorder: UnderlineInputBorder(
+           borderSide: BorderSide(color:Colors.white)
+         ),
+          focusedBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color:Colors.white)
+          ),
+       ),
     );
     final repeatPasswordField = TextFormField(
       autofocus: false,
@@ -36,11 +41,15 @@ class LoginScreen extends StatelessWidget {
       decoration: InputDecoration(
         fillColor: Colors.white,
         // hintStyle: TextStyle(color:Colors.white),
-        labelText: 'Password',
-        labelStyle: TextStyle(color:Colors.white),
-        errorBorder:
-            OutlineInputBorder(borderSide: new BorderSide(color: Colors.white)),
-      ),
+        labelText: 'Repeat Password',
+        labelStyle: TextStyle(color:Colors.grey[400]),
+         enabledBorder: UnderlineInputBorder(
+           borderSide: BorderSide(color:Colors.white)
+         ),
+          focusedBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color:Colors.white)
+          ),
+       ),
     );
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
@@ -77,17 +86,22 @@ class LoginScreen extends StatelessWidget {
                 style: TextStyle(
                     fontWeight: FontWeight.normal,
                     fontFamily: 'Montserrat',
-                    fontSize: 16,
-                    letterSpacing: 0.9,
-                    color: Colors.white),
+                    fontSize: 14,
+                    letterSpacing: 0.7,
+                    color: Colors.white54),
               ),
               SizedBox(height: height/5,),
               passwordField,
+              SizedBox(height: 15,),
               repeatPasswordField,
-                SizedBox(height: height/7,),
+                SizedBox(height: height/5,),
                 Row(
                   children: [
-                    Icon(Icons.arrow_back, color:Colors.white),
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.pop(context);
+                      },
+                      child: Icon(Icons.arrow_back, color:Colors.white)),
                     SizedBox(width:width/5,),
                     Container(
                       width: 160,
@@ -98,11 +112,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                         child: GestureDetector(
                           onTap: (){
-                            showModalBottomSheet(
-                              context: context, 
-                              builder: (context){
-                              return FractionallySizedBox();
-                            });
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
                           },
                           child: Icon(Icons.arrow_forward, color:kPrimaryColor)),
                     ),
