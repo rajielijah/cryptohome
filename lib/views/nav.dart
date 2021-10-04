@@ -12,11 +12,8 @@ class MyStatefulWidget extends StatefulWidget {
   @override
   _MyStatefulWidgetState createState() => _MyStatefulWidgetState();
 }
-
-/// This is the private State class that goes with MyStatefulWidget.
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int _selectedIndex = 0;
-  // static const color = const Color(0xFF184C35);
   static const color  = kPrimaryColor;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
@@ -25,16 +22,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     ListCoin(),
     SellCoin(),
     ProfileScreen(),
-    
   ];
-
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
   }
-
-
 @override
   Widget build(BuildContext context) {
     final String assetName = 'images/vector1.svg';
@@ -50,12 +43,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
-           icon: SvgPicture.asset('assets/images/user1.svg'),
+           icon: SvgPicture.asset('assets/images/user2.svg'),
             label: 'Buy',
             backgroundColor: color,
           ),
            BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/images/user2.svg'),
+            icon: SvgPicture.asset('assets/images/user1.svg'),
             label: 'Sell',
             backgroundColor: color,
           ),
@@ -67,10 +60,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
         ],
         type: BottomNavigationBarType.fixed,
-        // backgroundColor: kPColor,
+        backgroundColor: kPColor,
         currentIndex: _selectedIndex,
-        selectedItemColor: kPrimaryColor[10],
-        selectedIconTheme: IconThemeData(color: kPrimaryColor[10]),
+        selectedItemColor: kPColor[20],
+        selectedIconTheme: IconThemeData(color: kPColor[20]),
         unselectedItemColor: Colors.black,
         onTap: _onItemTapped,
         iconSize: 30,

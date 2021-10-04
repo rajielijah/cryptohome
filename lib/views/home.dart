@@ -45,13 +45,18 @@ class HomePage extends StatelessWidget {
                                     'Welcome Ben',
                                     overflow: TextOverflow.fade,
                                     style: TextStyle(
+                                        fontFamily: 'Montserrat',
                                         color: kPrimaryColor,
+                                        fontWeight: FontWeight.w500,
                                         fontSize: 18,
                                         letterSpacing: 0.7),
                                   ),
                                   Text(
                                     'BTC Value',
-                                    style: TextStyle(color: kPrimaryColor),
+                                    style: TextStyle(
+                                      fontFamily: 'Montserrat',
+                                      fontWeight: FontWeight.w400,
+                                      color: kPrimaryColor),
                                   ),
                                   Row(
                                     crossAxisAlignment: CrossAxisAlignment.end,
@@ -61,7 +66,8 @@ class HomePage extends StatelessWidget {
                                         '\$2,509.75',
                                         style: TextStyle(
                                             color: Colors.white,
-                                            fontWeight: FontWeight.bold,
+                                        fontFamily: 'Montserrat',
+                                      fontWeight: FontWeight.w600,
                                             letterSpacing: 0.7,
                                             fontSize: 26),
                                       ),
@@ -71,27 +77,71 @@ class HomePage extends StatelessWidget {
                                       Text(
                                         '+9.77%',
                                         style: TextStyle(
-                                            color: Colors.white, fontSize: 17),
+                                          fontFamily: 'Montserrat',
+                                      fontWeight: FontWeight.w600,
+                                            color: kPrimaryColor, fontSize: 17),
                                       ),
                                     ],
                                   ),
-                                  Align(
-                                    alignment: Alignment.bottomRight,
-                                    child: Text(
-                                      'Available Bal.',
-                                      style: TextStyle(color: kPrimaryColor),
-                                    ),
+                                  SizedBox(height: 14,),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Align(
+                                            alignment: Alignment.bottomLeft,
+                                            child: Text(
+                                              'Available Bal.',
+                                              style: TextStyle(color: kPrimaryColor,
+                                              fontFamily: 'Montserrat',
+                                              fontWeight: FontWeight.w400,
+                                              ),
+                                            ),
+                                          ),
+                                           Align(
+                                        alignment: Alignment.bottomLeft,
+                                        child: Text(
+                                          '\$1320',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontFamily: 'Montserrat',
+                                          fontWeight: FontWeight.w600,
+                                              fontSize: 20),
+                                        ),
+                                      )
+                                        ],
+                                      ),
+                                       Column(
+                                         crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Align(
+                                            alignment: Alignment.bottomRight,
+                                            child: Text(
+                                              'Bonus Bal.',
+                                              style: TextStyle(color: kPrimaryColor,
+                                              fontFamily: 'Montserrat',
+                                              fontWeight: FontWeight.w400,
+                                              ),
+                                            ),
+                                          ),
+                                           Align(
+                                        alignment: Alignment.bottomRight,
+                                        child: Text(
+                                          '\$320',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontFamily: 'Montserrat',
+                                          fontWeight: FontWeight.w600,
+                                              fontSize: 20),
+                                        ),
+                                      )
+                                        ],
+                                      ),
+                                    ],
                                   ),
-                                  Align(
-                                    alignment: Alignment.bottomRight,
-                                    child: Text(
-                                      '\$320',
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 20),
-                                    ),
-                                  )
+                                 
                                 ],
                               )),
                         ),

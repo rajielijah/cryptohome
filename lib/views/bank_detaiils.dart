@@ -36,8 +36,8 @@ class BankDetails extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(10),
                                   gradient: LinearGradient(
                                     colors: [
-                                      const Color(0xFF5DD35D),
-                                      const Color(0xFF5DD35D)
+                                      const Color(0xFF87D3DD),
+                                      const Color(0xFF87D3DD)
                                     ],
                                     begin: Alignment.centerLeft,
                                     end: Alignment.centerRight,
