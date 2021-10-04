@@ -1,6 +1,8 @@
 import 'package:cryptohome/constant/color.dart';
+import 'package:cryptohome/views/addBank.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 
 class BankDetails extends StatelessWidget {
@@ -49,40 +51,67 @@ class BankDetails extends StatelessWidget {
                         child:     Align(
                           alignment: Alignment.center,
                           child: ListTile(
-                            title: Text('Bank Details', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
-                            subtitle: Text('Select your preferred bank', style: TextStyle(color: Colors.white, letterSpacing: 0.7),),
+                            title: Text('Bank Details', style: TextStyle(fontFamily: 'Montserrat',
+                                              fontWeight: FontWeight.w600, fontSize: 25),),
+                            subtitle: Text('Select your preferred bank', style: TextStyle(color: Colors.white, letterSpacing: 0.7, fontFamily: 'Montserrat',
+                                              fontWeight: FontWeight.w400,),),
                             trailing:   GestureDetector(
                             onTap: (){
                               // Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => AddBank()));
                             },
-                            child: Container(
-                              height: height / 17,
-                              width: width / 4,
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(19)),
-                              child: Center(
-                                  child: Text(
-                                'Add bank',
-                                style: TextStyle(color: kPColor[10]),
-                              )),
+                            child: GestureDetector(
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => AddBank()));
+                              },
+                              child: Container(
+                                height: height / 17,
+                                width: width / 4,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(19)),
+                                child: Center(
+                                    child: Text(
+                                  'Add bank',
+                                  style: TextStyle(
+                                    fontFamily: 'Montserrat',
+                                              fontWeight: FontWeight.w400,
+                                    color: kPColor[10]),
+                                )),
+                              ),
                             ),
                           ),
                           ),
                         ),
                       ),
                     ),
-                    //  Positioned(
-                    //       bottom: 20,
-                    //       left: 10,
-                    //       child: Image.asset('images/l.png')),
+                    // Positioned(
+                    //         left: 90,
+                    //         top: 10,
+                    //         child:
+                    //             SvgPicture.asset('assets/images/vector9.svg')),
+                        Positioned(
+                            left: 30,
+                            top: 40,
+                            child:
+                                SvgPicture.asset('assets/images/vector9.svg')),
+                        Positioned(
+                            right: 30,
+                            top: 10,
+                            child:
+                                SvgPicture.asset('assets/images/vector9.svg')),
                         // Positioned(
-                        //   left: 10,
-                        //   bottom: 40,
-                        //   child: Image.asset('images/ls.png',))
+                        //     right: 60,
+                        //     bottom: 50,
+                        //     child:
+                        //         SvgPicture.asset('assets/images/vector9.svg')),
+                        Positioned(
+                            left: 40,
+                            bottom: 10,
+                            child:
+                                SvgPicture.asset('assets/images/vector9.svg'))
                   ],
                 ),
-                SizedBox(height: 40,),
+                // SizedBox(height: 10,),
                 Container(
                   height: height/7,
                   decoration: BoxDecoration(
@@ -92,9 +121,12 @@ class BankDetails extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(18.0),
                     child: ListTile(
-                      title: Text('Zenith Bank', style: TextStyle(),),
-                      subtitle: Text('5555 7777 8888 9999 0890', style: TextStyle(color: Colors.grey)),
-                      trailing: Text('Visa',style: TextStyle(color: Colors.blue),
+                      title: Text('Zenith Bank', style: TextStyle(fontFamily: 'Montserrat',
+                                              fontWeight: FontWeight.w400,),),
+                      subtitle: Text('5555 7777 8888 9999 0890', style: TextStyle(color: Colors.grey, fontFamily: 'Montserrat',
+                                              fontWeight: FontWeight.w400,)),
+                      trailing: Text('Visa',style: TextStyle(color: Colors.blue,fontFamily: 'Montserrat',
+                                              fontWeight: FontWeight.w400,),
                     ),
                 ),
                   ),
@@ -108,9 +140,12 @@ class BankDetails extends StatelessWidget {
                    child: Padding(
                      padding: const EdgeInsets.all(18.0),
                      child: ListTile(
-                       title: Text('First Bank', style: TextStyle(),),
-                       subtitle: Text('5555 7777 8888 9999 0890', style: TextStyle(color: Colors.grey)),
-                       trailing: Text('Visa',style: TextStyle(color: Colors.blue),
+                       title: Text('First Bank', style: TextStyle(fontFamily: 'Montserrat',
+                                              fontWeight: FontWeight.w400,),),
+                       subtitle: Text('5555 7777 8888 9999 0890', style: TextStyle(color: Colors.grey,fontFamily: 'Montserrat',
+                                              fontWeight: FontWeight.w400,)),
+                       trailing: Text('Visa',style: TextStyle(color: Colors.blue,fontFamily: 'Montserrat',
+                                              fontWeight: FontWeight.w400,),
                      ),
                  ),
                    ),
@@ -124,9 +159,12 @@ class BankDetails extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(18.0),
                     child: ListTile(
-                      title: Text('Zenith Bank', style: TextStyle(),),
-                      subtitle: Text('5555 7777 8888 9999 0890', style: TextStyle(color: Colors.grey)),
-                      trailing: Text('Mastercard',style: TextStyle(color: Colors.blue),
+                      title: Text('Zenith Bank', style: TextStyle(fontFamily: 'Montserrat',
+                                              fontWeight: FontWeight.w400,),),
+                      subtitle: Text('5555 7777 8888 9999 0890', style: TextStyle(color: Colors.grey, fontFamily: 'Montserrat',
+                                              fontWeight: FontWeight.w400,)),
+                      trailing: Text('Mastercard',style: TextStyle(color: Colors.blue, fontFamily: 'Montserrat',
+                                              fontWeight: FontWeight.w400,),
                     ),
                 ),
                   ),
@@ -140,9 +178,12 @@ class BankDetails extends StatelessWidget {
                    child: Padding(
                      padding: const EdgeInsets.all(18.0),
                      child: ListTile(
-                       title: Text('First Bank', style: TextStyle(),),
-                       subtitle: Text('5555 7777 8888 9999 0890', style: TextStyle(color: Colors.grey)),
-                       trailing: Text('Visa',style: TextStyle(color: Colors.blue),
+                       title: Text('First Bank', style: TextStyle(fontFamily: 'Montserrat',
+                                              fontWeight: FontWeight.w400,),),
+                       subtitle: Text('5555 7777 8888 9999 0890', style: TextStyle(color: Colors.grey, fontFamily: 'Montserrat',
+                                              fontWeight: FontWeight.w400,)),
+                       trailing: Text('Visa',style: TextStyle(color: Colors.blue, fontFamily: 'Montserrat',
+                                              fontWeight: FontWeight.w400,),
                      ),
                  ),
                    ),

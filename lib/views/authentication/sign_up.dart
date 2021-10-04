@@ -89,9 +89,15 @@ class _SignUpState extends State<SignUp> {
                   errorMessage: 'Invalid Phone number',
                   keyboardType: TextInputType.numberWithOptions(
                       signed: true, decimal: true),
+                 inputDecoration: InputDecoration(
+                   enabledBorder: UnderlineInputBorder(
+                   borderSide: BorderSide(color: Colors.white54)
+                 ),
+                   focusedBorder: UnderlineInputBorder(
+                   borderSide: BorderSide(color: Colors.white54)
+                 )),
                   inputBorder: UnderlineInputBorder(
                   borderSide: BorderSide(color: Colors.white) ),
-                  
                   textStyle: TextStyle(color: Colors.white),
                   onSaved: (PhoneNumber number) {
                     print('On Saved: $number');
@@ -180,38 +186,41 @@ class _SignUpState extends State<SignUp> {
               ),
               Padding(
                 padding: const EdgeInsets.all(18.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Have an Account?',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'Montserrat',
-                          fontSize: 14,
-                          fontWeight: FontWeight.normal),
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    GestureDetector(
-                        child: Text(
-                          'Sign in',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Montserrat',
-                              decoration: TextDecoration.underline,
-                              fontSize: 17,
-                              fontWeight: FontWeight.w300),
-                        ),
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (BuildContext context) =>
-                                      LoginScreen()));
-                        })
-                  ],
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Have an Account?',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'Montserrat',
+                            fontSize: 14,
+                            fontWeight: FontWeight.normal),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      GestureDetector(
+                          child: Text(
+                            'Sign in',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'Montserrat',
+                                decoration: TextDecoration.underline,
+                                fontSize: 17,
+                                fontWeight: FontWeight.w300),
+                          ),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        LoginScreen()));
+                          })
+                    ],
+                  ),
                 ),
               ),
             ],

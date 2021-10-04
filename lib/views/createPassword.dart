@@ -4,52 +4,84 @@ import 'package:cryptohome/views/authentication/login.dart';
 import 'package:cryptohome/views/authentication/sign_up.dart';
 import 'package:flutter/material.dart';
 
-class CreatePassword extends StatelessWidget {
+class CreatePassword extends StatefulWidget {
   const CreatePassword({Key? key}) : super(key: key);
 
   @override
+  _CreatePasswordState createState() => _CreatePasswordState();
+}
+
+class _CreatePasswordState extends State<CreatePassword> {
+  bool _passwordVisible = true;
+
+  @override
+  void initState() {
+    _passwordVisible = false;
+  }
+
+  @override
   Widget build(BuildContext context) {
-   final passwordField = TextFormField(
+    final passwordField = TextFormField(
       autofocus: false,
-      obscureText: true,
-      
+      obscureText: !_passwordVisible,
+
       // onSaved: (value) => _password = value,
       validator: (value) => value!.isEmpty ? "Please enter password" : null,
       maxLines: 1,
       minLines: 1,
+       style: TextStyle(color: Colors.white),
       decoration: InputDecoration(
-        fillColor: Colors.white,
-        // hintStyle: TextStyle(color:Colors.white),
-        labelText: 'Enter Password',
-        labelStyle: TextStyle(color:Colors.white),
-         enabledBorder: UnderlineInputBorder(
-           borderSide: BorderSide(color:Colors.white)
-         ),
-          focusedBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color:Colors.white)
+        suffixIcon: IconButton(
+          onPressed: () {
+            setState(() {
+              _passwordVisible = !_passwordVisible;
+            });
+          },
+          icon: Icon(
+            _passwordVisible ? Icons.visibility : Icons.visibility_off,
+            color: Theme.of(context).primaryColorDark,
           ),
-       ),
+        ),
+        fillColor: Colors.white,
+        hintStyle: TextStyle(color: Colors.white),
+        labelText: 'Enter Password',
+        labelStyle: TextStyle(color: Colors.white),
+        enabledBorder:
+            UnderlineInputBorder(borderSide: BorderSide(color: Colors.white54)),
+        focusedBorder:
+            UnderlineInputBorder(borderSide: BorderSide(color: Colors.white54)),
+      ),
     );
     final repeatPasswordField = TextFormField(
       autofocus: false,
-      obscureText: true,
-      
+      obscureText: _passwordVisible,
       // onSaved: (value) => _password = value,
+      style: TextStyle(color: Colors.white),
       validator: (value) => value!.isEmpty ? "Please enter password" : null,
       maxLines: 1,
       minLines: 1,
+      
       decoration: InputDecoration(
         fillColor: Colors.white,
         // hintStyle: TextStyle(color:Colors.white),
         labelText: 'Repeat Password',
-        labelStyle: TextStyle(color:Colors.white),
-         enabledBorder: UnderlineInputBorder(
-           borderSide: BorderSide(color:Colors.white)
-         ),
-          focusedBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color:Colors.white)
+        labelStyle: TextStyle(color: Colors.white),
+         suffixIcon: IconButton(
+          onPressed: () {
+            setState(() {
+              _passwordVisible = !_passwordVisible;
+            });
+          },
+          icon: Icon(
+            _passwordVisible ? Icons.visibility : Icons.visibility_off,
+            color: Theme.of(context).primaryColorDark,
           ),
-       ),
+        ),
+        enabledBorder:
+            UnderlineInputBorder(borderSide: BorderSide(color: Colors.white54)),
+        focusedBorder:
+            UnderlineInputBorder(borderSide: BorderSide(color: Colors.white54)),
+      ),
     );
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
@@ -68,7 +100,7 @@ class CreatePassword extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.only(top:58.0),
+                padding: const EdgeInsets.only(top: 58.0),
                 child: Text(
                   'Create your password',
                   style: TextStyle(
@@ -80,7 +112,7 @@ class CreatePassword extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height:15),
+              SizedBox(height: 15),
               Text(
                 "Kindly create your password",
                 style: TextStyle(
@@ -90,35 +122,45 @@ class CreatePassword extends StatelessWidget {
                     letterSpacing: 0.7,
                     color: Colors.white),
               ),
-              SizedBox(height: height/5,),
+              SizedBox(
+                height: height / 5,
+              ),
               passwordField,
-              SizedBox(height: 15,),
+              SizedBox(
+                height: 15,
+              ),
               repeatPasswordField,
-                SizedBox(height: height/5,),
-                Row(
-                  children: [
-                    GestureDetector(
-                      onTap: (){
+              SizedBox(
+                height: height / 5,
+              ),
+              Row(
+                children: [
+                  GestureDetector(
+                      onTap: () {
                         Navigator.pop(context);
                       },
-                      child: Icon(Icons.arrow_back, color:Colors.white)),
-                    SizedBox(width:width/5,),
-                    GestureDetector(
-                        onTap: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
-                          },
-                      child: Container(
-                        width: 160,
-                        height: 55,
-                        decoration: BoxDecoration(
+                      child: Icon(Icons.arrow_back, color: Colors.white)),
+                  SizedBox(
+                    width: width / 5,
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => LoginScreen()));
+                    },
+                    child: Container(
+                      width: 160,
+                      height: 55,
+                      decoration: BoxDecoration(
                           color: kPrimaryColor[10],
-                          borderRadius: BorderRadius.circular(30)
-                        ),
-                          child: Icon(Icons.arrow_forward, color:kPrimaryColor),
-                      ),
+                          borderRadius: BorderRadius.circular(30)),
+                      child: Icon(Icons.arrow_forward, color: kPrimaryColor),
                     ),
-                  ],
-                )
+                  ),
+                ],
+              )
             ],
           ),
         ),

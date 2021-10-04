@@ -6,7 +6,7 @@ const MaterialColor kPrimaryColor = const MaterialColor(
   const <int, Color> {
     10: const Color(0xFF87d3dd),
     20: const Color(0xFF4670b0)
-  }
+  },
 );
 
 const MaterialColor kPColor = const MaterialColor(
@@ -22,5 +22,6 @@ const MaterialColor kPColor = const MaterialColor(
 const MaterialColor textColor = const MaterialColor(
   0xFF343A40,
   const <int, Color> {
+    10:const Color(0xFF1BA27A)
   }
 );

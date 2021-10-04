@@ -7,9 +7,20 @@ import 'package:otp_text_field/otp_field.dart';
 import 'package:otp_text_field/otp_text_field.dart';
 import 'package:otp_text_field/style.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
+  @override
+  _LoginScreenState createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  bool _passwordVisible = true;
+  @override
+  void initState(){
+    super.initState();
+    _passwordVisible = false;
+  }
   @override
   Widget build(BuildContext context) {
     final EmailField = TextFormField(
@@ -18,23 +29,24 @@ class LoginScreen extends StatelessWidget {
         // validator: validateEmail,
         // onSaved: (value) => _email = value,
         minLines: 1,
+         style: TextStyle(color: Colors.white),
         decoration: InputDecoration(
           labelText: 'Email',
           labelStyle: TextStyle(color: Colors.white),
           contentPadding:
               new EdgeInsets.symmetric(vertical: 0, horizontal: 1.0),
           enabledBorder:
-              UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+              UnderlineInputBorder(borderSide: BorderSide(color: Colors.white54)),
           focusedBorder:
-              UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+              UnderlineInputBorder(borderSide: BorderSide(color: Colors.white54)),
           errorBorder: OutlineInputBorder(
               borderSide: new BorderSide(color: Colors.white)),
           // focusedBorder: OutlineInputBorder(),
         ));
     final passwordField = TextFormField(
         autofocus: false,
-        obscureText: true,
-
+        obscureText: _passwordVisible,
+         style: TextStyle(color: Colors.white),
         // onSaved: (value) => _password = value,
         validator: (value) => value!.isEmpty ? "Please enter password" : null,
         maxLines: 1,
@@ -43,11 +55,22 @@ class LoginScreen extends StatelessWidget {
             fillColor: Colors.white,
             // hintStyle: TextStyle(color:Colors.white),
             labelText: 'Password',
+             suffixIcon: IconButton(
+          onPressed: () {
+            setState(() {
+              _passwordVisible = !_passwordVisible;
+            });
+          },
+          icon: Icon(
+            _passwordVisible ? Icons.visibility : Icons.visibility_off,
+            color: Theme.of(context).primaryColorDark,
+          ),
+        ),
             labelStyle: TextStyle(color: Colors.white),
             enabledBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Colors.white)),
+                borderSide: BorderSide(color: Colors.white54)),
             focusedBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Colors.white))));
+                borderSide: BorderSide(color: Colors.white54))));
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
@@ -98,15 +121,9 @@ class LoginScreen extends StatelessWidget {
               SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment:CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'No account yet?',
-                    style: TextStyle(
-                        color: Colors.grey[400],
-                        fontFamily: 'Montserrat',
-                        fontSize: 14,
-                        fontWeight: FontWeight.normal),
-                  ),
+                 
                   SizedBox(
                     width: 10,
                   ),
@@ -128,6 +145,9 @@ class LoginScreen extends StatelessWidget {
                       }),
                   SizedBox(
                     width: 10,
+                  ),
+                  SizedBox(
+                    width: width/4
                   ),
                   Text('Forgot password?',
                       style: TextStyle(
@@ -153,69 +173,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
-                      showModalBottomSheet(
-                          context: context,
-                          elevation: 20,
-                          builder: (context) {
-                            return Container(
-                              margin: const EdgeInsets.only(
-                                  top: 5, left: 15, right: 15),
-                              alignment: Alignment.center,
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 10, vertical: 10),
-                              height: 191,
-                              width: width,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20)),
-                              child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    OTPTextField(
-                                      length: 4,
-                                      width: width / 1.09,
-                                      textFieldAlignment:
-                                          MainAxisAlignment.spaceAround,
-                                      fieldWidth: 64,
-
-                                      // margin: EdgeInsets.symmetric(horizontal:10, vertical:10),
-                                      fieldStyle: FieldStyle.underline,
-                                      outlineBorderRadius: 17,
-
-                                      otpFieldStyle: OtpFieldStyle(
-                                          backgroundColor: kPColor,
-                                          borderColor: kPrimaryColor,
-                                          focusBorderColor: kPColor),
-
-                                      style: TextStyle(color: Colors.white),
-                                    ),
-                                    SizedBox(
-                                      height: 15,
-                                    ),
-                                    Text(
-                                        'Please enter the 4 digit code that was sent to you'),
-                                    SizedBox(height: 20),
-                                    GestureDetector(
-                                      onTap: () {
-                                        Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    MyStatefulWidget()));
-                                      },
-                                      child: Container(
-                                        width: 150,
-                                        height: 50,
-                                        decoration: BoxDecoration(
-                                            color: kPrimaryColor,
-                                            borderRadius:
-                                                BorderRadius.circular(30)),
-                                        child: Icon(Icons.arrow_forward,
-                                            color: Colors.white),
-                                      ),
-                                    )
-                                  ]),
-                            );
-                          });
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => MyStatefulWidget()));
                     },
                     child: Container(
                       width: 160,

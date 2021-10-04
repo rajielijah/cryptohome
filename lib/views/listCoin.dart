@@ -13,17 +13,19 @@ class ListCoin extends StatelessWidget {
     return Scaffold(
         body: SafeArea(
             child: Container(
+              color: kPrimaryColor,
       child: Padding(
         padding: const EdgeInsets.all(18.0),
         child: Column(
           children: [
+            SizedBox(height: 35,),
             Text(
-              "Buy your coins",
+              "Select your preferred coin",
               style: TextStyle(
                   fontFamily: 'Montserrat',
-                  fontSize: 25,
+                  fontSize: 15,
                   fontWeight: FontWeight.w700,
-                  color: kPrimaryColor),
+                  color: Colors.white),
             ),
             SizedBox(
               height: 20,
@@ -34,9 +36,9 @@ class ListCoin extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => BuyCoin()));
               },
               child: Container(
-                height: 75,
+                height: 60,
                 width: width,
-                color: kPrimaryColor,
+                color: kPrimaryColor.withGreen(5),
                 child: ListTile(
                   leading: Image.asset('assets/images/me.png'),
                   title: Row(
@@ -59,22 +61,6 @@ class ListCoin extends StatelessWidget {
                       ),
                     ],
                   ),
-                  subtitle: Text(
-                    '5,204',
-                    style: TextStyle(
-                        fontFamily: 'Montserrat',
-                        fontSize: 12,
-                        fontWeight: FontWeight.w300,
-                        color: Colors.white),
-                  ),
-                  trailing: Text(
-                    '+9.77%',
-                    style: TextStyle(
-                        fontFamily: 'Montserrat',
-                        fontSize: 12,
-                        fontWeight: FontWeight.w300,
-                        color: Colors.green),
-                  ),
                 ),
               ),
             ),
@@ -87,9 +73,9 @@ class ListCoin extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => BuyCoin()));
               },
               child: Container(
-                height: 75,
+                height: 60,
                 width: width,
-                color: kPrimaryColor,
+                color: kPrimaryColor.withGreen(5),
                 child: ListTile(
                   leading: SvgPicture.asset('assets/images/ETH.svg'),
                   title: Row(
@@ -112,22 +98,7 @@ class ListCoin extends StatelessWidget {
                       ),
                     ],
                   ),
-                  subtitle: Text(
-                    '5,204',
-                    style: TextStyle(
-                        fontFamily: 'Montserrat',
-                        fontSize: 12,
-                        fontWeight: FontWeight.w300,
-                        color: Colors.white),
-                  ),
-                  trailing: Text(
-                    '-19.77%',
-                    style: TextStyle(
-                        fontFamily: 'Montserrat',
-                        fontSize: 12,
-                        fontWeight: FontWeight.w300,
-                        color: Colors.red),
-                  ),
+                 
                 ),
               ),
             ),
@@ -140,9 +111,9 @@ class ListCoin extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => BuyCoin()));
               },
               child: Container(
-                height: 75,
+                height: 60,
                 width: width,
-                color: kPrimaryColor,
+                color: kPrimaryColor.withGreen(5),
                 child: ListTile(
                   leading: SvgPicture.asset('assets/images/USDT.svg'),
                   title: Row(
@@ -165,22 +136,7 @@ class ListCoin extends StatelessWidget {
                       ),
                     ],
                   ),
-                  subtitle: Text(
-                    '5,204',
-                    style: TextStyle(
-                        fontFamily: 'Montserrat',
-                        fontSize: 12,
-                        fontWeight: FontWeight.w300,
-                        color: Colors.white),
-                  ),
-                  trailing: Text(
-                    '+9.77%',
-                    style: TextStyle(
-                        fontFamily: 'Montserrat',
-                        fontSize: 12,
-                        fontWeight: FontWeight.w300,
-                        color: Colors.green),
-                  ),
+                  
                 ),
               ),
             ),
@@ -193,9 +149,9 @@ class ListCoin extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => BuyCoin()));
               },
               child: Container(
-                height: 75,
+                height: 60,
                 width: width,
-                color: kPrimaryColor,
+                color: kPrimaryColor.withGreen(5),
                 child: ListTile(
                   leading: SvgPicture.asset('assets/images/bnb.svg'),
                   title: Row(
@@ -218,22 +174,7 @@ class ListCoin extends StatelessWidget {
                       ),
                     ],
                   ),
-                  subtitle: Text(
-                    '5,204',
-                    style: TextStyle(
-                        fontFamily: 'Montserrat',
-                        fontSize: 12,
-                        fontWeight: FontWeight.w300,
-                        color: Colors.white),
-                  ),
-                  trailing: Text(
-                    '-12.29%',
-                    style: TextStyle(
-                        fontFamily: 'Montserrat',
-                        fontSize: 12,
-                        fontWeight: FontWeight.w300,
-                        color: Colors.red),
-                  ),
+                 
                 ),
               ),
             ),

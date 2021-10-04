@@ -16,6 +16,7 @@ class BuyCoin extends StatefulWidget {
 
 class _BuyCoinState extends State<BuyCoin> {
   TextEditingController _controller = TextEditingController();
+
   bool _readOnly = true;
   @override
   Widget build(BuildContext context) {
@@ -33,80 +34,134 @@ class _BuyCoinState extends State<BuyCoin> {
               child: Column(
                 // mainAxisAlignment: MainAxisAlignment.spaceEv,
                 children: [
-                 Padding(
-              padding: const EdgeInsets.only(bottom: 1.0, top: 18),
-              child: coin(
-                  context,
-                  Image.asset('assets/images/me.png'),
-                  Text(
-                    'Bitcoin',
-                    style: TextStyle(fontSize: 18),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 1.0, top: 18),
+                    child: coin(
+                        context,
+                        Image.asset('assets/images/me.png'),
+                        Text(
+                          'Bitcoin',
+                          style: TextStyle(fontSize: 18),
+                        ),
+                        Text('BTC'),
+                        SvgPicture.asset('assets/images/chart.svg'),
+                        Text(""),
+                        Text("")),
                   ),
-                  Text('BTC'),
-                  SvgPicture.asset('assets/images/chart.svg'),
-                  Text('\$2,309.43',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, letterSpacing: 0.7)),
-                  Text(
-                    '+9.77%',
-                    style: TextStyle(
-                        color: kPrimaryColor, fontWeight: FontWeight.bold),
-                  )),
-            ),
                   SizedBox(height: height / 17),
-                  Text('Enter Amount in BTC'),
-                  SizedBox(height: height / 27),
-                  Center(
-                    child: TextField(
-                      controller: _controller,
-                      decoration: InputDecoration(
-                          contentPadding: EdgeInsets.only(
-                            bottom: width / 27, // HERE THE IMPORTANT PART
+                  Container(
+                    height: 200,
+                    width: width,
+                    decoration: BoxDecoration(
+                      color: kPrimaryColor,
+                      borderRadius: BorderRadius.circular(20)
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(18.0),
+                      child: Column(
+                        children: [
+                          Row(
+                            // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'You buy',
+                                style: TextStyle(
+                                  color: Colors.white54,
+                                  fontFamily: "Montserrat",
+                                  fontWeight: FontWeight.normal,
+                                ),
+                              ),
+                              SizedBox(width: width / 2.35),
+                              Text(
+                                'In',
+                                style: TextStyle(
+                                    color: Colors.white54,
+                                    fontFamily: "Montserrat",
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 15),
+                              ),
+                            ],
                           ),
-                          border: InputBorder.none,
-                          hintText: '\$0',
-                          hintStyle: TextStyle(color: Colors.black)),
-                      textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 34, color: kPrimaryColor),
-                      autofocus: true,
-                      showCursor: true,
-                      readOnly: _readOnly,
+                          Row(
+                            children: [
+                              Flexible(
+                                flex: 2,
+                                child: TextField(
+                                  controller: _controller,
+                                  decoration: InputDecoration(
+                                      border: UnderlineInputBorder(),
+                                      hintText: '1500',
+                                      hintStyle:
+                                          TextStyle(color: Colors.white)),
+                                  style: TextStyle(
+                                      fontSize: 14, color: Colors.white),
+                                  autofocus: true,
+                                  readOnly: _readOnly,
+                                ),
+                              ),
+                              SizedBox(width: 30),
+                              Flexible(
+                                child: TextField(
+                                    controller: _controller,
+                                    decoration: InputDecoration(
+                                        border: UnderlineInputBorder(),
+                                        hintText: '1500',
+                                        hintStyle:
+                                            TextStyle(color: Colors.white)),
+                                    style: TextStyle(
+                                        fontSize: 14, color: Colors.white),
+                                    autofocus: true,
+                                    readOnly: _readOnly,
+                                  ),
+                              ),
+                              
+                            ],
+                          ),
+                          SizedBox(
+                            height: 15
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Min \$100 - Max \$10,00000',
+                                style: TextStyle(
+                                    color: Colors.white54,
+                                    fontFamily: "Montserrat",
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 12),
+                              ),
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Rate: ',
+                                    style: TextStyle(
+                                        color: Colors.white54,
+                                        fontFamily: "Montserrat",
+                                        fontWeight: FontWeight.normal,
+                                        fontSize: 15),
+                                  ),
+                                  Text(
+                                    ' 530',
+                                    style: TextStyle(
+                                        color: Colors.green,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 15),
+                                  )
+                                ],
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(
                     height: 17,
                   ),
-                   Text('Min \$100 - Max \$10,00000'),
-                     SizedBox(
-                    height: 27,
-                  ),
-                   Text('Value (N):  N10,000'),
-                  // SizedBox(
-                  //   height: height / 12,
-                  // ),
-                 Padding(
-                    padding: const EdgeInsets.all(20),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Rate: ',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 15),
-                        ),
-                        Text(
-                          ' 530',
-                          style: TextStyle(
-                              color: Colors.green,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 15),
-                        )
-                      ],
-                    ),
-                  ),
-                 
-                 
                   SizedBox(
                     height: 15,
                   ),
@@ -125,7 +180,7 @@ class _BuyCoinState extends State<BuyCoin> {
                     minWidth: 330,
                     height: height / 15,
                     shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30)),
+                        borderRadius: BorderRadius.circular(30)),
                     onPressed: () {
                       Navigator.push(
                           context,
@@ -138,7 +193,6 @@ class _BuyCoinState extends State<BuyCoin> {
                     ),
                     color: kPrimaryColor,
                   ),
-
                 ],
               ),
             ),
@@ -148,7 +202,7 @@ class _BuyCoinState extends State<BuyCoin> {
     );
   }
 
-   void _insertText(String myText) {
+  void _insertText(String myText) {
     final text = _controller.text;
     final textSelection = _controller.selection;
     final newText = text.replaceRange(

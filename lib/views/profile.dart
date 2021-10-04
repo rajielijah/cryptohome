@@ -20,115 +20,98 @@ class ProfileScreen extends StatelessWidget {
       body: SafeArea(
           child: SingleChildScrollView(
         child: Container(
-          // color: kPrimaryColor,
+          color: kPrimaryColor,
           width: width,
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Stack(
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        gradient: LinearGradient(
-                          colors: [
-                            const Color(0xFF87D3DD),
-                            const Color(0xFF87D3DD)
-                          ],
-                          begin: Alignment.centerLeft,
-                          end: Alignment.centerRight,
-                          // stops: [0.0, 0.1],
+              Stack(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        CircleAvatar(
+                          child: SvgPicture.asset('assets/images/profile.svg'),
+                          radius: 40,
                         ),
-                      ),
-                      height: MediaQuery.of(context).size.height / 3,
-                      width: MediaQuery.of(context).size.width,
-                      child: Padding(
-                        padding: const EdgeInsets.all(20.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Stack(
-                              alignment: Alignment.bottomRight,
-                              children: [
-                                CircleAvatar(
-                                  child: SvgPicture.asset(
-                                      'assets/images/profile.svg'),
-                                  radius: 40,
-                                ),
-                                Positioned(
-                                    //  top: 22,
-                                    child: SvgPicture.asset(
-                                        'assets/images/vector4.svg'))
-                              ],
-                            ),
-                            Text(
-                              'Ben Tom',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 25, fontFamily: 'Montserrat'),
-                            ),
                             Text(
                               'Bentom@gmail.com',
-                              style: TextStyle(color: kPrimaryColor,                                  
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 17, fontFamily: 'Montserrat'),
+                              style: TextStyle(
+                                  color: Colors.white54,
+                                  fontWeight: FontWeight.normal,
+                                  fontSize: 14,
+                                  fontFamily: 'Montserrat'),
                             ),
                             Text(
                               '+2341 9977118',
                               style: TextStyle(
-                                color: kPrimaryColor,                                
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 17, fontFamily: 'Montserrat'
-                              ),
+                                  color: Colors.white54,
+                                  fontWeight: FontWeight.normal,
+                                  fontSize: 14,
+                                  fontFamily: 'Montserrat'),
                             )
                           ],
                         ),
-                      ),
+                      ],
                     ),
-                    Positioned(left: 30, top: 40, child: SvgPicture.asset('assets/images/vector9.svg')),
-                  
-                  ],
+                  ),
+                ],
+              ),
+              Align(
+                alignment: Alignment.bottomLeft,
+                child: Text(
+                  'Ben Tom',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 25,
+                      fontFamily: 'Montserrat'),
                 ),
               ),
               profile(
                   context,
-                  SvgPicture.asset('assets/images/profile1.svg'),
+                  SvgPicture.asset('assets/images/pro6.svg'),
                   Text(
                     'Profile details',
                     style: TextStyle(
-                        fontSize: 19,
+                        fontSize: 15,
                         fontWeight: FontWeight.w500,
-                        color: textColor),
+                        color: Colors.white),
                   ),
                   Icon(Icons.arrow_forward_ios_sharp)),
               GestureDetector(
-                onTap:(){
-                   Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => BankDetails()));
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (BuildContext context) => BankDetails()));
                 },
                 child: profile(
                     context,
-                    SvgPicture.asset('assets/images/profile2.svg'),
+                    SvgPicture.asset('assets/images/pro4.svg'),
                     Text(
                       'Bank details',
                       style: TextStyle(
-                          fontSize: 19,
+                          fontSize: 15,
                           fontWeight: FontWeight.w500,
-                          color: textColor),
+                          color: Colors.white),
                     ),
                     Icon(Icons.arrow_forward_ios_sharp)),
               ),
               // profile(
               //     context,
-              //     SvgPicture.asset('assets/images/profile3.svg'),
+              //     SvgPicture.asset('assets/images/pro3.svg'),
               //     Text(
               //       'Notifications',
               //       style: TextStyle(
-              //           fontSize: 19,
+              //           fontSize: 15,
               //           fontWeight: FontWeight.w500,
-              //           color: textColor),
+              //           color: Colors.white),
               //     ),
               //     Icon(Icons.arrow_forward_ios_sharp)),
               GestureDetector(
@@ -140,44 +123,50 @@ class ProfileScreen extends StatelessWidget {
                   },
                   child: profile(
                       context,
-                      SvgPicture.asset('assets/images/profile5.svg'),
+                      SvgPicture.asset('assets/images/pro1.svg'),
                       Text(
                         'Security',
                         style: TextStyle(
-                            fontSize: 19,
+                            fontSize: 15,
                             fontWeight: FontWeight.w500,
-                            color: textColor),
+                            color: Colors.white),
                       ),
                       Icon(Icons.arrow_forward_ios_sharp))),
               GestureDetector(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Promo()));
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (BuildContext context) => Promo()));
                 },
                 child: profile(
                     context,
-                    SvgPicture.asset('assets/images/profile4.svg'),
+                    SvgPicture.asset('assets/images/pro3.svg'),
                     Text(
                       'Promo',
                       style: TextStyle(
-                          fontSize: 19,
+                          fontSize: 15,
                           fontWeight: FontWeight.w500,
-                          color: textColor),
+                          color: Colors.white),
                     ),
                     Icon(Icons.arrow_forward_ios_sharp)),
               ),
               GestureDetector(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Terms()));
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (BuildContext context) => Terms()));
                 },
                 child: profile(
                     context,
-                    SvgPicture.asset('assets/images/profile6.svg'),
+                    SvgPicture.asset('assets/images/pro2.svg'),
                     Text(
                       'Terms and Conditions',
                       style: TextStyle(
-                          fontSize: 19,
+                          fontSize: 15,
                           fontWeight: FontWeight.w500,
-                          color: textColor),
+                          color: Colors.white),
                     ),
                     Icon(Icons.arrow_forward_ios_sharp)),
               ),
@@ -188,11 +177,11 @@ class ProfileScreen extends StatelessWidget {
                     showAlertDialog(context);
                   },
                   child: ListTile(
-                      leading: SvgPicture.asset('assets/images/profile7.svg'),
+                      leading: SvgPicture.asset('assets/images/pro7.svg'),
                       title: Text(
                         'Logout',
                         style: TextStyle(
-                            fontSize: 19, fontWeight: FontWeight.w500),
+                            fontSize: 15, fontWeight: FontWeight.w500),
                       )),
                 ),
               )

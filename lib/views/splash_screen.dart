@@ -1,5 +1,6 @@
 import 'package:cryptohome/constant/color.dart';
 import 'package:cryptohome/views/authentication/sign_up.dart';
+import 'package:cryptohome/views/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
@@ -27,7 +28,7 @@ class _SplashState extends State<Splash> {
 
   void navigationPage() {
     Navigator.pushReplacement(context,
-        MaterialPageRoute(builder: (BuildContext context) => SignUp()));
+        MaterialPageRoute(builder: (BuildContext context) => Onboarding()));
   }
   @override
   Widget build(BuildContext context) {

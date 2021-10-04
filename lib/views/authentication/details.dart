@@ -15,6 +15,7 @@ class DetailsScreen extends StatelessWidget {
         // validator: validateEmail,
         // onSaved: (value) => _email = value,
         minLines: 1,
+         style: TextStyle(color: Colors.white),
         decoration: InputDecoration(
           labelText: 'Email',
           floatingLabelBehavior: FloatingLabelBehavior.auto,
@@ -23,15 +24,16 @@ class DetailsScreen extends StatelessWidget {
           contentPadding:
               new EdgeInsets.symmetric(vertical: 0, horizontal: 1.0),
          enabledBorder: UnderlineInputBorder(
-           borderSide: BorderSide(color:Colors.white)
+           borderSide: BorderSide(color:Colors.white54)
          ),
           focusedBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color:Colors.white)
+              borderSide: BorderSide(color:Colors.white54)
           ),
         ));
        final firstNameField = TextFormField(
         autofocus: false,
         maxLines: 1,
+         style: TextStyle(color: Colors.white),
         // validator: validateEmail,
         // onSaved: (value) => _email = value,
         minLines: 1,
@@ -41,17 +43,18 @@ class DetailsScreen extends StatelessWidget {
           contentPadding:
               new EdgeInsets.symmetric(vertical: 0, horizontal: 1.0),
         enabledBorder: UnderlineInputBorder(
-           borderSide: BorderSide(color:Colors.white)
+           borderSide: BorderSide(color:Colors.white54)
          ),
       
           focusedBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color:Colors.white)
+              borderSide: BorderSide(color:Colors.white54)
           ),
           // focusedBorder: OutlineInputBorder(),
         ));
        final lastNameField = TextFormField(
         autofocus: false,
         maxLines: 1,
+         style: TextStyle(color: Colors.white),
         // validator: validateEmail,
         // onSaved: (value) => _email = value,
         minLines: 1,
@@ -61,11 +64,11 @@ class DetailsScreen extends StatelessWidget {
           contentPadding:
               new EdgeInsets.symmetric(vertical: 0, horizontal: 1.0),
         enabledBorder: UnderlineInputBorder(
-           borderSide: BorderSide(color:Colors.white)
+           borderSide: BorderSide(color:Colors.white54)
          ),
       
           focusedBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color:Colors.white)
+              borderSide: BorderSide(color:Colors.white54)
           ), ));
     
     var height = MediaQuery.of(context).size.height;
