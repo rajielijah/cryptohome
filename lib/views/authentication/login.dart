@@ -20,7 +20,7 @@ class LoginScreen extends StatelessWidget {
         minLines: 1,
         decoration: InputDecoration(
           labelText: 'Email',
-          labelStyle: TextStyle(color: Colors.white54),
+          labelStyle: TextStyle(color: Colors.white),
           contentPadding:
               new EdgeInsets.symmetric(vertical: 0, horizontal: 1.0),
           enabledBorder:
@@ -43,7 +43,7 @@ class LoginScreen extends StatelessWidget {
             fillColor: Colors.white,
             // hintStyle: TextStyle(color:Colors.white),
             labelText: 'Password',
-            labelStyle: TextStyle(color: Colors.white54),
+            labelStyle: TextStyle(color: Colors.white),
             enabledBorder: UnderlineInputBorder(
                 borderSide: BorderSide(color: Colors.white)),
             focusedBorder: UnderlineInputBorder(
@@ -85,7 +85,7 @@ class LoginScreen extends StatelessWidget {
                     fontFamily: 'Montserrat',
                     fontSize: 16,
                     letterSpacing: 0.9,
-                    color: Colors.white54),
+                    color: Colors.white),
               ),
               SizedBox(
                 height: height / 5,

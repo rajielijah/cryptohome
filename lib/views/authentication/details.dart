@@ -19,7 +19,7 @@ class DetailsScreen extends StatelessWidget {
           labelText: 'Email',
           floatingLabelBehavior: FloatingLabelBehavior.auto,
            border: UnderlineInputBorder(  ),
-           labelStyle: TextStyle(color:Colors.white54),
+           labelStyle: TextStyle(color:Colors.white),
           contentPadding:
               new EdgeInsets.symmetric(vertical: 0, horizontal: 1.0),
          enabledBorder: UnderlineInputBorder(
@@ -37,7 +37,7 @@ class DetailsScreen extends StatelessWidget {
         minLines: 1,
         decoration: InputDecoration(
           labelText: 'First name',
-           labelStyle: TextStyle(color:Colors.white54),
+           labelStyle: TextStyle(color:Colors.white),
           contentPadding:
               new EdgeInsets.symmetric(vertical: 0, horizontal: 1.0),
         enabledBorder: UnderlineInputBorder(
@@ -57,7 +57,7 @@ class DetailsScreen extends StatelessWidget {
         minLines: 1,
         decoration: InputDecoration(
           labelText: 'Last name',
-           labelStyle: TextStyle(color:Colors.white54),
+           labelStyle: TextStyle(color:Colors.white),
           contentPadding:
               new EdgeInsets.symmetric(vertical: 0, horizontal: 1.0),
         enabledBorder: UnderlineInputBorder(
@@ -105,7 +105,7 @@ class DetailsScreen extends StatelessWidget {
                     fontFamily: 'Montserrat',
                     fontSize: 16,
                     letterSpacing: 0.9,
-                    color: Colors.white54),
+                    color: Colors.white),
               ),
               SizedBox(height: height/5,),
               EmailField,
@@ -122,18 +122,20 @@ class DetailsScreen extends StatelessWidget {
                       },
                       child: Icon(Icons.arrow_back, color:Colors.white)),
                     SizedBox(width:width/5,),
-                    Container(
-                      width: 160,
-                      height: 55,
-                      decoration: BoxDecoration(
-                        color: kPrimaryColor[10],
-                        borderRadius: BorderRadius.circular(30)
-                      ),
-                        child: GestureDetector(
-                          onTap: (){
+                    GestureDetector(
+                         onTap: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context) => CreatePassword()));
                           },
-                          child: Icon(Icons.arrow_forward, color:kPrimaryColor)),
+                      
+                      child: Container(
+                        width: 160,
+                        height: 55,
+                        decoration: BoxDecoration(
+                          color: kPrimaryColor[10],
+                          borderRadius: BorderRadius.circular(30)
+                        ),
+                          child: Icon(Icons.arrow_forward, color:kPrimaryColor),
+                      ),
                     ),
                   ],
                 )

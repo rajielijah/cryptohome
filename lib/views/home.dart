@@ -117,131 +117,131 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 18.0, left: 18),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: kPrimaryColor,
-                        borderRadius: BorderRadius.circular(10)
-                      ),
-                      child: ListTile(
-                        leading: Image.asset('assets/images/me.png'),
-                        title:  Row(
-                              children: [
-                                Text(
-                                  'Bticoin ',
-                                  style: TextStyle(
-                                      fontFamily: 'Montserrat',
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w300,
-                                      color: Colors.white),
-                                ),
-                                Text(
-                                  '(BTC)',
-                                  style: TextStyle(
-                                      fontFamily: 'Montserrat',
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w300,
-                                      color: Colors.white),
-                                ),
-                              ],
-                            ),
-                        trailing: Icon(Icons.arrow_drop_down, color:Colors.white),
-                        focusColor: kPrimaryColor,
-                        tileColor: kPrimaryColor,
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(14.0),
-                    child: Row(
-                      // crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        Text(
-                          '\$98,609.74  ',
-                          style: TextStyle(
-                              fontSize: 27, fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          '+1700.254  (9.77%)',
-                          style: TextStyle(
-                              color: Colors.green[300],
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold),
-                        )
-                      ],
-                    ),
-                  ),
-                  SvgPicture.asset('assets/images/charts.svg'),
-                  SizedBox(
-                    height: height / 25,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(18.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Container(
-                          width: width / 8,
-                          height: height / 20,
-                          decoration: BoxDecoration(
-                              color: kPrimaryColor,
-                              borderRadius: BorderRadius.circular(20),
-                              border: Border.all(color: kPrimaryColor)),
-                          child: Center(
-                              child: Text(
-                            '1 H',
-                            style: TextStyle(color: Colors.white),
-                          )),
-                        ),
-                        Container(
-                          width: width / 8,
-                          height: height / 20,
-                          decoration: BoxDecoration(
-                              color: Colors.grey[200],
-                              borderRadius: BorderRadius.circular(20),
-                              border: Border.all(color: Colors.grey)),
-                          child: Center(child: Text('24 H')),
-                        ),
-                        Container(
-                          width: width / 8,
-                          height: height / 20,
-                          decoration: BoxDecoration(
-                              color: Colors.grey[200],
-                              borderRadius: BorderRadius.circular(20),
-                              border: Border.all(color: Colors.grey)),
-                          child: Center(child: Text('1 W')),
-                        ),
-                        Container(
-                          width: width / 8,
-                          height: height / 20,
-                          decoration: BoxDecoration(
-                              color: Colors.grey[200],
-                              borderRadius: BorderRadius.circular(20),
-                              border: Border.all(color: Colors.grey)),
-                          child: Center(child: Text('1 M')),
-                        ),
-                        Container(
-                          width: width / 8,
-                          height: height / 20,
-                          decoration: BoxDecoration(
-                              color: Colors.grey[200],
-                              borderRadius: BorderRadius.circular(20),
-                              border: Border.all(color: Colors.grey)),
-                          child: Center(child: Text('6 M')),
-                        ),
-                        Container(
-                          width: width / 8,
-                          height: height / 20,
-                          decoration: BoxDecoration(
-                              color: Colors.grey[200],
-                              borderRadius: BorderRadius.circular(20),
-                              border: Border.all(color: Colors.grey)),
-                          child: Center(child: Text('1 Y')),
-                        )
-                      ],
-                    ),
-                  ),
+                  // Padding(
+                  //   padding: const EdgeInsets.only(right: 18.0, left: 18),
+                  //   child: Container(
+                  //     decoration: BoxDecoration(
+                  //       color: kPrimaryColor,
+                  //       borderRadius: BorderRadius.circular(10)
+                  //     ),
+                  //     child: ListTile(
+                  //       leading: Image.asset('assets/images/me.png'),
+                  //       title:  Row(
+                  //             children: [
+                  //               Text(
+                  //                 'Bticoin ',
+                  //                 style: TextStyle(
+                  //                     fontFamily: 'Montserrat',
+                  //                     fontSize: 18,
+                  //                     fontWeight: FontWeight.w300,
+                  //                     color: Colors.white),
+                  //               ),
+                  //               Text(
+                  //                 '(BTC)',
+                  //                 style: TextStyle(
+                  //                     fontFamily: 'Montserrat',
+                  //                     fontSize: 12,
+                  //                     fontWeight: FontWeight.w300,
+                  //                     color: Colors.white),
+                  //               ),
+                  //             ],
+                  //           ),
+                  //       trailing: Icon(Icons.arrow_drop_down, color:Colors.white),
+                  //       focusColor: kPrimaryColor,
+                  //       tileColor: kPrimaryColor,
+                  //     ),
+                  //   ),
+                  // ),
+                  // Padding(
+                  //   padding: const EdgeInsets.all(14.0),
+                  //   child: Row(
+                  //     // crossAxisAlignment: CrossAxisAlignment.end,
+                  //     children: [
+                  //       Text(
+                  //         '\$98,609.74  ',
+                  //         style: TextStyle(
+                  //             fontSize: 27, fontWeight: FontWeight.bold),
+                  //       ),
+                  //       Text(
+                  //         '+1700.254  (9.77%)',
+                  //         style: TextStyle(
+                  //             color: Colors.green[300],
+                  //             fontSize: 18,
+                  //             fontWeight: FontWeight.bold),
+                  //       )
+                  //     ],
+                  //   ),
+                  // ),
+                  // SvgPicture.asset('assets/images/charts.svg'),
+                  // SizedBox(
+                  //   height: height / 25,
+                  // ),
+                  // Padding(
+                  //   padding: const EdgeInsets.all(18.0),
+                  //   child: Row(
+                  //     mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  //     children: [
+                  //       Container(
+                  //         width: width / 8,
+                  //         height: height / 20,
+                  //         decoration: BoxDecoration(
+                  //             color: kPrimaryColor,
+                  //             borderRadius: BorderRadius.circular(20),
+                  //             border: Border.all(color: kPrimaryColor)),
+                  //         child: Center(
+                  //             child: Text(
+                  //           '1 H',
+                  //           style: TextStyle(color: Colors.white),
+                  //         )),
+                  //       ),
+                  //       Container(
+                  //         width: width / 8,
+                  //         height: height / 20,
+                  //         decoration: BoxDecoration(
+                  //             color: Colors.grey[200],
+                  //             borderRadius: BorderRadius.circular(20),
+                  //             border: Border.all(color: Colors.grey)),
+                  //         child: Center(child: Text('24 H')),
+                  //       ),
+                  //       Container(
+                  //         width: width / 8,
+                  //         height: height / 20,
+                  //         decoration: BoxDecoration(
+                  //             color: Colors.grey[200],
+                  //             borderRadius: BorderRadius.circular(20),
+                  //             border: Border.all(color: Colors.grey)),
+                  //         child: Center(child: Text('1 W')),
+                  //       ),
+                  //       Container(
+                  //         width: width / 8,
+                  //         height: height / 20,
+                  //         decoration: BoxDecoration(
+                  //             color: Colors.grey[200],
+                  //             borderRadius: BorderRadius.circular(20),
+                  //             border: Border.all(color: Colors.grey)),
+                  //         child: Center(child: Text('1 M')),
+                  //       ),
+                  //       Container(
+                  //         width: width / 8,
+                  //         height: height / 20,
+                  //         decoration: BoxDecoration(
+                  //             color: Colors.grey[200],
+                  //             borderRadius: BorderRadius.circular(20),
+                  //             border: Border.all(color: Colors.grey)),
+                  //         child: Center(child: Text('6 M')),
+                  //       ),
+                  //       Container(
+                  //         width: width / 8,
+                  //         height: height / 20,
+                  //         decoration: BoxDecoration(
+                  //             color: Colors.grey[200],
+                  //             borderRadius: BorderRadius.circular(20),
+                  //             border: Border.all(color: Colors.grey)),
+                  //         child: Center(child: Text('1 Y')),
+                  //       )
+                  //     ],
+                  //   ),
+                  // ),
                   Padding(
                     padding: const EdgeInsets.only(left:18.0, right:18, top:18),
                     child: Container(

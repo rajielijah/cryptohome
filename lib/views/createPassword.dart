@@ -21,7 +21,7 @@ class CreatePassword extends StatelessWidget {
         fillColor: Colors.white,
         // hintStyle: TextStyle(color:Colors.white),
         labelText: 'Enter Password',
-        labelStyle: TextStyle(color:Colors.grey[400]),
+        labelStyle: TextStyle(color:Colors.white),
          enabledBorder: UnderlineInputBorder(
            borderSide: BorderSide(color:Colors.white)
          ),
@@ -42,7 +42,7 @@ class CreatePassword extends StatelessWidget {
         fillColor: Colors.white,
         // hintStyle: TextStyle(color:Colors.white),
         labelText: 'Repeat Password',
-        labelStyle: TextStyle(color:Colors.grey[400]),
+        labelStyle: TextStyle(color:Colors.white),
          enabledBorder: UnderlineInputBorder(
            borderSide: BorderSide(color:Colors.white)
          ),
@@ -88,7 +88,7 @@ class CreatePassword extends StatelessWidget {
                     fontFamily: 'Montserrat',
                     fontSize: 14,
                     letterSpacing: 0.7,
-                    color: Colors.white54),
+                    color: Colors.white),
               ),
               SizedBox(height: height/5,),
               passwordField,
@@ -103,18 +103,19 @@ class CreatePassword extends StatelessWidget {
                       },
                       child: Icon(Icons.arrow_back, color:Colors.white)),
                     SizedBox(width:width/5,),
-                    Container(
-                      width: 160,
-                      height: 55,
-                      decoration: BoxDecoration(
-                        color: kPrimaryColor[10],
-                        borderRadius: BorderRadius.circular(30)
-                      ),
-                        child: GestureDetector(
-                          onTap: (){
+                    GestureDetector(
+                        onTap: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
                           },
-                          child: Icon(Icons.arrow_forward, color:kPrimaryColor)),
+                      child: Container(
+                        width: 160,
+                        height: 55,
+                        decoration: BoxDecoration(
+                          color: kPrimaryColor[10],
+                          borderRadius: BorderRadius.circular(30)
+                        ),
+                          child: Icon(Icons.arrow_forward, color:kPrimaryColor),
+                      ),
                     ),
                   ],
                 )

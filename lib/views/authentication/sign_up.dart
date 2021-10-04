@@ -105,19 +105,16 @@ class _SignUpState extends State<SignUp> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    width: 130,
-                    height: 60,
-                    decoration: BoxDecoration(
-                        color: kPrimaryColor[10],
-                        borderRadius: BorderRadius.circular(30)),
-                    child: GestureDetector(
-                        onTap: () {
+                  GestureDetector(
+                       onTap: () {
                           showModalBottomSheet(
                               context: context,
                               elevation: 20,
                               builder: (context) {
                                 return Container(
+                                     margin: const EdgeInsets.only(top: 5, left: 15, right: 15),
+                                          alignment: Alignment.center,
+                                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                                   height: 191,
                                   width: width,
                                   decoration: BoxDecoration(
@@ -147,47 +144,38 @@ class _SignUpState extends State<SignUp> {
                                         Text(
                                             'Please enter the 4 digit code that was sent to you'),
                                         SizedBox(height: 20),
-                                        Container(
-                                          margin: const EdgeInsets.only(top: 5, left: 15, right: 15),
-                                          alignment: Alignment.center,
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                                          width: 150,
-                                          height: 50,
-                                          decoration: BoxDecoration(
-                                              color: kPrimaryColor,
-                                              borderRadius:
-                                                  BorderRadius.circular(30)),
-                                          child: GestureDetector(
-                                              onTap: () {
+                                        GestureDetector(
+                                           onTap: () {
                                                 Navigator.push(
                                                     context,
                                                     MaterialPageRoute(
                                                         builder: (context) =>
                                                             DetailsScreen()));
                                               },
-                                              child: Icon(Icons.arrow_forward, color:Colors.white)),
+                                          child: Container(
+                                            width: 170,
+                                            height: 60,
+                                            decoration: BoxDecoration(
+                                                color: kPrimaryColor,
+                                                borderRadius:
+                                                    BorderRadius.circular(30)),
+                                            child: Icon(Icons.arrow_forward, color:Colors.white),
+                                          ),
                                         )
                                       ]),
                                 );
                               });
                         },
-                        child: Icon(Icons.arrow_forward)),
-                  ),
-                  SizedBox(
-                    width: 30,
-                  ),
-                  Container(
-                    width: 130,
-                    height: 60,
-                    decoration: BoxDecoration(
-                        // color: kPrimaryColor[10],
-                        border: Border.all(color: kPColor),
-                        borderRadius: BorderRadius.circular(30)),
-                    child: Image.asset(
-                      'assets/images/search.png',
-                      height: height / 10,
+                    child: Container(
+                      width: 130,
+                      height: 60,
+                      decoration: BoxDecoration(
+                          color: kPrimaryColor[10],
+                          borderRadius: BorderRadius.circular(30)),
+                      child: Icon(Icons.arrow_forward),
                     ),
                   ),
+                 
                 ],
               ),
               Padding(
@@ -198,7 +186,7 @@ class _SignUpState extends State<SignUp> {
                     Text(
                       'Have an Account?',
                       style: TextStyle(
-                          color: Colors.grey[500],
+                          color: Colors.white,
                           fontFamily: 'Montserrat',
                           fontSize: 14,
                           fontWeight: FontWeight.normal),

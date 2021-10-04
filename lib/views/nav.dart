@@ -1,6 +1,7 @@
 import 'package:cryptohome/constant/color.dart';
 import 'package:cryptohome/views/buy_coin.dart';
 import 'package:cryptohome/views/home.dart';
+import 'package:cryptohome/views/listCoin.dart';
 import 'package:cryptohome/views/profile.dart';
 import 'package:cryptohome/views/sell.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static List<Widget> _widgetOptions = <Widget>[
     HomePage(),
-    BuyCoin(),
+    ListCoin(),
     SellCoin(),
     ProfileScreen(),
     
