@@ -2,6 +2,7 @@ import 'package:cryptohome/constant/color.dart';
 import 'package:cryptohome/constant/profile.dart';
 import 'package:cryptohome/views/authentication/sign_up.dart';
 import 'package:cryptohome/views/bank_detaiils.dart';
+import 'package:cryptohome/views/profile_details.dart';
 import 'package:cryptohome/views/promo.dart';
 import 'package:cryptohome/views/security.dart';
 import 'package:cryptohome/views/terms.dart';
@@ -78,17 +79,22 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              profile(
-                  context,
-                  SvgPicture.asset('assets/images/pro6.svg'),
-                  Text(
-                    'Profile details',
-                    style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.white),
-                  ),
-                  Icon(Icons.arrow_forward_ios_sharp, color: Colors.white)),
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileDetails()));
+                },
+                child: profile(
+                    context,
+                    SvgPicture.asset('assets/images/pro6.svg'),
+                    Text(
+                      'Profile details',
+                      style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white),
+                    ),
+                    Icon(Icons.arrow_forward_ios_sharp, color: Colors.white)),
+              ),
               GestureDetector(
                 onTap: () {
                   Navigator.push(
@@ -182,7 +188,7 @@ class ProfileScreen extends StatelessWidget {
                     showAlertDialog(context);
                   },
                   child: ListTile(
-                      leading: SvgPicture.asset('assets/images/pro7.svg'),
+                      leading: SvgPicture.asset('assets/images/profile7.svg'),
                       title: Text(
                         'Logout',
                         style: TextStyle(

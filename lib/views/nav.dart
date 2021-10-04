@@ -4,6 +4,7 @@ import 'package:cryptohome/views/home.dart';
 import 'package:cryptohome/views/listCoin.dart';
 import 'package:cryptohome/views/profile.dart';
 import 'package:cryptohome/views/sell.dart';
+import 'package:cryptohome/views/sellListCoin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -20,7 +21,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static List<Widget> _widgetOptions = <Widget>[
     HomePage(),
     ListCoin(),
-    SellCoin(),
+    SellListCoin(),
     ProfileScreen(),
   ];
   void _onItemTapped(int index) {
@@ -60,11 +61,11 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
         ],
         type: BottomNavigationBarType.fixed,
-        backgroundColor: kPColor,
+        backgroundColor: kPrimaryColor.withGreen(5),
         currentIndex: _selectedIndex,
         selectedItemColor: kPColor[20],
         selectedIconTheme: IconThemeData(color: kPColor[20]),
-        unselectedItemColor: Colors.black,
+        unselectedItemColor: Colors.white,
         onTap: _onItemTapped,
         iconSize: 30,
         // elevation: 30,
