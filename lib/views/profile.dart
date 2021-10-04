@@ -22,20 +22,22 @@ class ProfileScreen extends StatelessWidget {
         child: Container(
           color: kPrimaryColor,
           width: width,
+          height: height,
           child: Column(
             children: [
               Stack(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(20.0),
+                    padding: const EdgeInsets.all(15.0),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         CircleAvatar(
                           child: SvgPicture.asset('assets/images/profile.svg'),
                           radius: 40,
                         ),
+                        SizedBox(width: width/7,),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -62,15 +64,18 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              Align(
-                alignment: Alignment.bottomLeft,
-                child: Text(
-                  'Ben Tom',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w700,
-                      fontSize: 25,
-                      fontFamily: 'Montserrat'),
+              Padding(
+                padding: const EdgeInsets.all(18.0),
+                child: Align(
+                  alignment: Alignment.bottomLeft,
+                  child: Text(
+                    'Ben Tom',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 25,
+                        fontFamily: 'Montserrat'),
+                  ),
                 ),
               ),
               profile(
@@ -83,7 +88,7 @@ class ProfileScreen extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                         color: Colors.white),
                   ),
-                  Icon(Icons.arrow_forward_ios_sharp)),
+                  Icon(Icons.arrow_forward_ios_sharp, color: Colors.white)),
               GestureDetector(
                 onTap: () {
                   Navigator.push(
@@ -101,7 +106,7 @@ class ProfileScreen extends StatelessWidget {
                           fontWeight: FontWeight.w500,
                           color: Colors.white),
                     ),
-                    Icon(Icons.arrow_forward_ios_sharp)),
+                    Icon(Icons.arrow_forward_ios_sharp, color: Colors.white)),
               ),
               // profile(
               //     context,
@@ -113,7 +118,7 @@ class ProfileScreen extends StatelessWidget {
               //           fontWeight: FontWeight.w500,
               //           color: Colors.white),
               //     ),
-              //     Icon(Icons.arrow_forward_ios_sharp)),
+              //     Icon(Icons.arrow_forward_ios_sharp, color: Colors.white)),
               GestureDetector(
                   onTap: () {
                     Navigator.push(
@@ -131,7 +136,7 @@ class ProfileScreen extends StatelessWidget {
                             fontWeight: FontWeight.w500,
                             color: Colors.white),
                       ),
-                      Icon(Icons.arrow_forward_ios_sharp))),
+                      Icon(Icons.arrow_forward_ios_sharp, color: Colors.white))),
               GestureDetector(
                 onTap: () {
                   Navigator.push(
@@ -149,7 +154,7 @@ class ProfileScreen extends StatelessWidget {
                           fontWeight: FontWeight.w500,
                           color: Colors.white),
                     ),
-                    Icon(Icons.arrow_forward_ios_sharp)),
+                    Icon(Icons.arrow_forward_ios_sharp, color: Colors.white)),
               ),
               GestureDetector(
                 onTap: () {
@@ -168,7 +173,7 @@ class ProfileScreen extends StatelessWidget {
                           fontWeight: FontWeight.w500,
                           color: Colors.white),
                     ),
-                    Icon(Icons.arrow_forward_ios_sharp)),
+                    Icon(Icons.arrow_forward_ios_sharp, color: Colors.white)),
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 20.0, right: 20),
@@ -181,6 +186,7 @@ class ProfileScreen extends StatelessWidget {
                       title: Text(
                         'Logout',
                         style: TextStyle(
+                          color: Colors.white,
                             fontSize: 15, fontWeight: FontWeight.w500),
                       )),
                 ),
