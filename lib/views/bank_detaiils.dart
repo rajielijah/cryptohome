@@ -82,11 +82,11 @@ class BankDetails extends StatelessWidget {
                 ),
                 // SizedBox(height: 10,),
                 Padding(
-                  padding: const EdgeInsets.all(18.0),
+                  padding: const EdgeInsets.all(12.0),
                   child: Container(
                     height: height / 7,
                     decoration: BoxDecoration(
-                        color: kPrimaryColor.withGreen(5),
+                        color: kPColor.withOpacity(0.1),
                         borderRadius: BorderRadius.circular(8)),
                     child: Padding(
                       padding: const EdgeInsets.all(18.0),
@@ -118,11 +118,11 @@ class BankDetails extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left:18.0, right: 18),
+                  padding: const EdgeInsets.only(left:12.0, right: 12),
                   child: Container(
                     height: height / 7,
                     decoration: BoxDecoration(
-                        color: kPrimaryColor.withGreen(5),
+                        color: kPColor.withOpacity(0.1),
                         borderRadius: BorderRadius.circular(8)),
                     child: Padding(
                       padding: const EdgeInsets.all(18.0),
@@ -154,11 +154,11 @@ class BankDetails extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(18.0),
+                  padding: const EdgeInsets.all(12.0),
                   child: Container(
                     height: height / 7,
                     decoration: BoxDecoration(
-                        color: kPrimaryColor.withGreen(5),
+                        color: kPColor.withOpacity(0.1),
                         borderRadius: BorderRadius.circular(8)),
                     child: Padding(
                       padding: const EdgeInsets.all(18.0),

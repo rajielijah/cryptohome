@@ -21,11 +21,11 @@ class _AddBankState extends State<AddBank> {
       //  onSaved: (value) => _accountNumber = value,
       decoration: InputDecoration(
           contentPadding: new EdgeInsets.symmetric(),
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: UnderlineInputBorder(
               borderSide: new BorderSide(color: Colors.grey)),
-           focusedBorder: OutlineInputBorder(
+           focusedBorder: UnderlineInputBorder(
             borderSide:
-                new BorderSide(color: Colors.black, style: BorderStyle.solid)),
+                new BorderSide(color: Colors.white54, style: BorderStyle.solid)),
           hintText: ''),
       
     );
@@ -33,17 +33,17 @@ class _AddBankState extends State<AddBank> {
     final pinField = TextFormField(
       autofocus: false,
       // obscureText: true,
-      maxLines: 1,
+      // maxLines: 1,
       //  onSaved: (value) => _accountName = value,
-      minLines: 1,
+      // minLines: 1,
       // validator: (value) => value.isEmpty ? "Please enter pin" : null,
       decoration: InputDecoration(
           contentPadding: new EdgeInsets.symmetric(),
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: UnderlineInputBorder(
               borderSide: new BorderSide(color: Colors.grey)),
-           focusedBorder: OutlineInputBorder(
+           focusedBorder: UnderlineInputBorder(
             borderSide:
-                new BorderSide(color: Colors.black, style: BorderStyle.solid)),
+                new BorderSide(color: Colors.white54, style: BorderStyle.solid)),
           hintText: ''),
     );
     final cvvField = TextFormField(
@@ -53,11 +53,11 @@ class _AddBankState extends State<AddBank> {
       minLines: 1,
       decoration: InputDecoration(
           contentPadding: new EdgeInsets.symmetric(),
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: UnderlineInputBorder(
               borderSide: new BorderSide(color: Colors.grey)),
-           focusedBorder: OutlineInputBorder(
+           focusedBorder: UnderlineInputBorder(
             borderSide:
-                new BorderSide(color: Colors.black, style: BorderStyle.solid)),
+                new BorderSide(color: Colors.white54, style: BorderStyle.solid)),
          ),
     );
 
@@ -74,164 +74,150 @@ class _AddBankState extends State<AddBank> {
             body: SingleChildScrollView(
               child: Form(
                 key: formKey,
-                child: Column(
-                  children: [
-                    Container(
-                      height: height / 1.45,
-                      width: width,
-                      color: Colors.white,
-                      child: Padding(
-                        padding: const EdgeInsets.all(18.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          // mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            GestureDetector(
-                                onTap: () {
-                                  Navigator.pop(context);
-                                },
-                                child: Icon(Icons.arrow_back)),
-                            SizedBox(
-                              height: height / 30,
-                            ),
-                            Text('Add bank',
-                                style: TextStyle(
-                                    fontFamily: 'Montserrat',
-                                              fontWeight: FontWeight.w600, fontSize: 24)),
-                            SizedBox(
-                              height: height / 50,
-                            ),
-                            Text(
-                              'Fill in you card details',
-                              style: TextStyle(
-                                  color: kPrimaryColor,
-                                  fontFamily: 'Montserrat',
-                                              fontWeight: FontWeight.w400,
-                                  letterSpacing: 0.7),
-                            ),
-                            SizedBox(
-                              height: height / 45,
-                            ),
-                            Text(
-                              'Account Number',
-                              style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                              fontWeight: FontWeight.w600, fontSize: 18),
-                            ),
-                            SizedBox(
-                              height: height / 80,
-                            ),
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Colors.white,
-                              ),
-                              // padding: EdgeInsets.all(10),
-                              child: Column(
-                                children: [
-                                  cardNoField,
-                                ],
-                              ),
-                            ),
-                            SizedBox(
-                              height: height / 25,
-                            ),
-                            Text(
-                              'Account Name',
-                              style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                              fontWeight: FontWeight.w400, fontSize: 18),
-                            ),
-                            SizedBox(
-                              height: height / 80,
-                            ),
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Colors.white,
-                              ),
-                              // padding: EdgeInsets.all(10),
-                              child: Column(
-                                children: [
-                                  pinField,
-                                ],
-                              ),
-                            ),
-                            SizedBox(
-                              height: height / 25,
-                            ),
-                            Text(
-                              'Bank Name',
-                              style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                              fontWeight: FontWeight.w400, fontSize: 18),
-                            ),
-                            SizedBox(
-                              height: height / 80,
-                            ),
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Colors.white,
-                              ),
-                              // padding: EdgeInsets.all(10),
-                              child: Column(
-                                children: [
-                                  cvvField,
-                                ],
-                              ),
-                            ),
-                            SizedBox(
-                              height: height / 25,
-                            ),
-                            // Text(
-                            //   'Expiry Date',
-                            //   style: TextStyle(
-                            //       fontWeight: FontWeight.bold, fontSize: 18),
-                            // ),
-                            // SizedBox(
-                            //   height: height / 80,
-                            // ),
-                            // Container(
-                            //   decoration: BoxDecoration(
-                            //     borderRadius: BorderRadius.circular(10),
-                            //     color: Colors.white,
-                            //   ),
-                            //   // padding: EdgeInsets.all(10),
-                            //   child: Column(
-                            //     children: [
-                            //       expiryDateField,
-                            //     ],
-                            //   ),
-                            // ),
-                          ],
+                child: Container(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: GestureDetector(
+                                        onTap: () {
+                                          Navigator.pop(context);
+                                        },
+                                        child: Icon(Icons.arrow_back)),
                         ),
-                      ),
-                    ),
-                    Container(
-                      width: width,
-                      height: 100,
-                      child: Padding(
-                        padding: const EdgeInsets.all(28.0),
-                        child: Container(
-                          // color: kPrimaryColor,
-                          child: FlatButton(
-                            minWidth: 330,
-                            height: 50,
-                            color:kPrimaryColor,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                            onPressed:(){
-                              //  doAddBank(context, provideris);
-                            },
-                            child: Text('SAVE & CONTINUE',
-                                 style: TextStyle(color: Colors.white, fontSize: 18))),
-                           
+                      Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(18.0),
+                            child: Container(
+                              height: height / 1.45,
+                              width: width,
+                              decoration: BoxDecoration(
+                                color: kPrimaryColor,borderRadius: BorderRadius.circular(20)
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(18.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                  children: [
+                                  
+                                    SizedBox(
+                                      height: height / 30,
+                                    ),
+                                    Text('Add bank',
+                                        style: TextStyle(
+                                            fontFamily: 'Montserrat',
+                                            color: Colors.white,
+                                                      fontWeight: FontWeight.w600, fontSize: 24)),
+                                    SizedBox(
+                                      height: height / 50,
+                                    ),
+                                    Text(
+                                      'Fill in you card details',
+                                      style: TextStyle(
+                                          color: kColor[10],
+                                          fontFamily: 'Montserrat',
+                                                      fontWeight: FontWeight.w400,
+                                          letterSpacing: 0.7),
+                                    ),
+                                    SizedBox(
+                                      height: height / 45,
+                                    ),
+                                    Text(
+                                      'Account Number',
+                                      style: TextStyle(
+                                          fontFamily: 'Montserrat',
+                                          color: Colors.white,
+                                                      fontWeight: FontWeight.w600, fontSize: 18),
+                                    ),
+                                    // SizedBox(
+                                    //   height: height / 80,
+                                    // ),
+                                    cardNoField,
+                                    SizedBox(
+                                      height: height / 25,
+                                    ),
+                                    Text(
+                                      'Account Name',
+                                      style: TextStyle(
+                                          fontFamily: 'Montserrat',
+                                          color: Colors.white,
+                                                      fontWeight: FontWeight.w400, fontSize: 18),
+                                    ),
+                                    // SizedBox(
+                                    //   height: height / 80,
+                                    // ),
+                                    pinField,
+                                    SizedBox(
+                                      height: height / 25,
+                                    ),
+                                    Text(
+                                      'Bank Name',
+                                      style: TextStyle(color: Colors.white,
+                                          fontFamily: 'Montserrat',
+                                                      fontWeight: FontWeight.w400, fontSize: 18),
+                                    ),
+                                    // SizedBox(
+                                    //   height: height / 80,
+                                    // ),
+                                    cvvField,
+                                    SizedBox(
+                                      height: height / 25,
+                                    ),
+                                    // Text(
+                                    //   'Expiry Date',
+                                    //   style: TextStyle(
+                                    //       fontWeight: FontWeight.bold, fontSize: 18),
+                                    // ),
+                                    // SizedBox(
+                                    //   height: height / 80,
+                                    // ),
+                                    // Container(
+                                    //   decoration: BoxDecoration(
+                                    //     borderRadius: BorderRadius.circular(10),
+                                    //     color: Colors.white,
+                                    //   ),
+                                    //   // padding: EdgeInsets.all(10),
+                                    //   child: Column(
+                                    //     children: [
+                                    //       expiryDateField,
+                                    //     ],
+                                    //   ),
+                                    // ),
+                                  ],
+                                ),
+                              ),
+                            ),
                           ),
-                        ),
+                          Container(
+                            width: width,
+                            height: 100,
+                            child: Padding(
+                              padding: const EdgeInsets.all(28.0),
+                              child: Container(
+                                // color: kPrimaryColor,
+                                child: FlatButton(
+                                  minWidth: 330,
+                                  height: 50,
+                                  color:kPrimaryColor,
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(30)),
+                                  onPressed:(){
+                                    //  doAddBank(context, provideris);
+                                  },
+                                  child: Text('SAVE & CONTINUE',
+                                       style: TextStyle(color: Colors.white, fontSize: 18))),
+                                 
+                                ),
+                              ),
+                            ),
+                          
+                        ],
                       ),
-                    
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),

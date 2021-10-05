@@ -25,3 +25,9 @@ const MaterialColor textColor = const MaterialColor(
     10:const Color(0xFF1BA27A)
   }
 );
+
+const MaterialColor kColor = const MaterialColor(
+  0xFF87d3dd,
+  const <int, Color> {
+     },
+);

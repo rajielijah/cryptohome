@@ -38,7 +38,7 @@ class ListCoin extends StatelessWidget {
               child: Container(
                 height: 60,
                 width: width,
-                color: kPrimaryColor.withGreen(5),
+                color: kPColor.withOpacity(0.1),
                 child: ListTile(
                   leading: Image.asset('assets/images/me.png'),
                   title: Row(
@@ -75,7 +75,7 @@ class ListCoin extends StatelessWidget {
               child: Container(
                 height: 60,
                 width: width,
-                color: kPrimaryColor.withGreen(5),
+                color: kPColor.withOpacity(0.1),
                 child: ListTile(
                   leading: SvgPicture.asset('assets/images/ETH.svg'),
                   title: Row(
@@ -113,7 +113,7 @@ class ListCoin extends StatelessWidget {
               child: Container(
                 height: 60,
                 width: width,
-                color: kPrimaryColor.withGreen(5),
+                color: kPColor.withOpacity(0.1),
                 child: ListTile(
                   leading: SvgPicture.asset('assets/images/USDT.svg'),
                   title: Row(
@@ -151,7 +151,7 @@ class ListCoin extends StatelessWidget {
               child: Container(
                 height: 60,
                 width: width,
-                color: kPrimaryColor.withGreen(5),
+                color: kPColor.withOpacity(0.1),
                 child: ListTile(
                   leading: Image.asset('assets/images/bnb.png', height: 30, width: 30,),
                   title: Row(

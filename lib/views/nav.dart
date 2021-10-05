@@ -39,22 +39,22 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       bottomNavigationBar: BottomNavigationBar(
         items:  <BottomNavigationBarItem>[
            BottomNavigationBarItem(
-           icon: SvgPicture.asset('assets/images/user5.svg'),
+           icon: SvgPicture.asset('assets/images/navs4.svg'),
             label: 'Home',
             backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
-           icon: SvgPicture.asset('assets/images/user2.svg'),
+           icon: SvgPicture.asset('assets/images/navs3.svg'),
             label: 'Buy',
             backgroundColor: color,
           ),
            BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/images/user1.svg'),
+            icon: SvgPicture.asset('assets/images/navs2.svg'),
             label: 'Sell',
             backgroundColor: color,
           ),
            BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/images/User.svg'),
+            icon: SvgPicture.asset('assets/images/navs1.svg'),
             // icon: ImageIcon(AssetImage('images/vector8.png')),
             label: 'Profile',
             backgroundColor: color,
@@ -64,7 +64,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         backgroundColor: kPrimaryColor.withGreen(5),
         currentIndex: _selectedIndex,
         selectedItemColor: kPColor[20],
-        selectedIconTheme: IconThemeData(color: kPColor[20]),
+        selectedIconTheme: IconThemeData(color: Colors.amber),
         unselectedItemColor: Colors.white,
         onTap: _onItemTapped,
         iconSize: 30,

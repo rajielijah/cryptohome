@@ -127,7 +127,7 @@ class HomePage extends StatelessWidget {
                      Container(
                        height:160,
                        width: 160,
-                       color:kPrimaryColor.withGreen(5),
+                       color:kPColor.withOpacity(0.1),
                        child: Column(
                          children: [
                            Padding(
@@ -194,7 +194,7 @@ class HomePage extends StatelessWidget {
                      Container(
                        height:160,
                        width: 160,
-                       color:kPrimaryColor.withGreen(5),
+                       color:kPColor.withOpacity(0.1),
                        child: Column(
                          children: [
                            Padding(
@@ -269,7 +269,7 @@ class HomePage extends StatelessWidget {
                      Container(
                        height:160,
                        width: 160,
-                       color:kPrimaryColor.withGreen(5),
+                       color:kPColor.withOpacity(0.1),
                        child: Column(
                          children: [
                            Padding(
@@ -336,7 +336,7 @@ class HomePage extends StatelessWidget {
                      Container(
                        height:160,
                        width: 160,
-                       color:kPrimaryColor.withGreen(5),
+                       color:kPColor.withOpacity(0.1),
                        child: Column(
                          children: [
                            Padding(
@@ -412,7 +412,7 @@ class HomePage extends StatelessWidget {
                             width: 160,
                             height: 50,
                             decoration: BoxDecoration(
-                                color: kPrimaryColor[10],
+                                color: kColor,
                                 borderRadius: BorderRadius.circular(30)),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
