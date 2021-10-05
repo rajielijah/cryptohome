@@ -152,7 +152,7 @@ class HomePage extends StatelessWidget {
                               style: TextStyle(
                                   color: Colors.white54,
                                   fontWeight: FontWeight.normal,
-                                  fontFamily: "Montserrat", fontSize: 10),
+                                  fontFamily: "Montserrat", fontSize: 12),
                             ),
                             Text(
                               ' 530',
@@ -160,7 +160,7 @@ class HomePage extends StatelessWidget {
                                   color: Colors.green,
                                   fontWeight: FontWeight.normal,
                                   fontFamily: "Montserrat",
-                                  fontSize: 10),
+                                  fontSize: 12),
                             )
                           ],
                         ),
@@ -172,7 +172,7 @@ class HomePage extends StatelessWidget {
                             Text(
                               'Sell rate: ',
                               style: TextStyle(
-                                  fontWeight: FontWeight.normal, fontFamily: 'Montserrat', fontSize: 10, color: Colors.white54),
+                                  fontWeight: FontWeight.normal, fontFamily: 'Montserrat', fontSize: 12, color: Colors.white54),
                             ),
                             Text(
                               ' 530',
@@ -180,7 +180,7 @@ class HomePage extends StatelessWidget {
                                   color: Colors.red[500],
                                   fontWeight: FontWeight.normal,
                                   fontFamily: "Montserrat",
-                                  fontSize: 10),
+                                  fontSize:12),
                             )
                           ],
                         ),
@@ -219,7 +219,7 @@ class HomePage extends StatelessWidget {
                               style: TextStyle(
                                   color: Colors.white54,
                                   fontWeight: FontWeight.normal,
-                                  fontFamily: "Montserrat", fontSize: 10),
+                                  fontFamily: "Montserrat", fontSize:12),
                             ),
                             Text(
                               ' 530',
@@ -227,7 +227,7 @@ class HomePage extends StatelessWidget {
                                   color: Colors.green,
                                   fontWeight: FontWeight.normal,
                                   fontFamily: "Montserrat",
-                                  fontSize: 10),
+                                  fontSize:12),
                             )
                           ],
                         ),
@@ -239,7 +239,7 @@ class HomePage extends StatelessWidget {
                             Text(
                               'Sell rate: ',
                               style: TextStyle(
-                                  fontWeight: FontWeight.normal, fontFamily: 'Montserrat', fontSize: 10, color: Colors.white54),
+                                  fontWeight: FontWeight.normal, fontFamily: 'Montserrat', fontSize:12, color: Colors.white54),
                             ),
                             Text(
                               ' 530',
@@ -247,7 +247,7 @@ class HomePage extends StatelessWidget {
                                   color: Colors.red[500],
                                   fontWeight: FontWeight.normal,
                                   fontFamily: "Montserrat",
-                                  fontSize: 10),
+                                  fontSize:12),
                             )
                           ],
                         ),
@@ -294,7 +294,7 @@ class HomePage extends StatelessWidget {
                               style: TextStyle(
                                   color: Colors.white54,
                                   fontWeight: FontWeight.normal,
-                                  fontFamily: "Montserrat", fontSize: 10),
+                                  fontFamily: "Montserrat", fontSize:12),
                             ),
                             Text(
                               ' 530',
@@ -302,7 +302,7 @@ class HomePage extends StatelessWidget {
                                   color: Colors.green,
                                   fontWeight: FontWeight.normal,
                                   fontFamily: "Montserrat",
-                                  fontSize: 10),
+                                  fontSize:12),
                             )
                           ],
                         ),
@@ -314,7 +314,7 @@ class HomePage extends StatelessWidget {
                             Text(
                               'Sell rate: ',
                               style: TextStyle(
-                                  fontWeight: FontWeight.normal, fontFamily: 'Montserrat', fontSize: 10, color: Colors.white54),
+                                  fontWeight: FontWeight.normal, fontFamily: 'Montserrat', fontSize:12, color: Colors.white54),
                             ),
                             Text(
                               ' 530',
@@ -322,7 +322,7 @@ class HomePage extends StatelessWidget {
                                   color: Colors.red[500],
                                   fontWeight: FontWeight.normal,
                                   fontFamily: "Montserrat",
-                                  fontSize: 10),
+                                  fontSize:12),
                             )
                           ],
                         ),
@@ -361,7 +361,7 @@ class HomePage extends StatelessWidget {
                               style: TextStyle(
                                   color: Colors.white54,
                                   fontWeight: FontWeight.normal,
-                                  fontFamily: "Montserrat", fontSize: 10),
+                                  fontFamily: "Montserrat", fontSize:12),
                             ),
                             Text(
                               ' 530',
@@ -369,7 +369,7 @@ class HomePage extends StatelessWidget {
                                   color: Colors.green,
                                   fontWeight: FontWeight.normal,
                                   fontFamily: "Montserrat",
-                                  fontSize: 10),
+                                  fontSize:12),
                             )
                           ],
                         ),
@@ -381,7 +381,7 @@ class HomePage extends StatelessWidget {
                             Text(
                               'Sell rate: ',
                               style: TextStyle(
-                                  fontWeight: FontWeight.normal, fontFamily: 'Montserrat', fontSize: 10, color: Colors.white54),
+                                  fontWeight: FontWeight.normal, fontFamily: 'Montserrat', fontSize:12, color: Colors.white54),
                             ),
                             Text(
                               ' 530',
@@ -389,7 +389,7 @@ class HomePage extends StatelessWidget {
                                   color: Colors.red[500],
                                   fontWeight: FontWeight.normal,
                                   fontFamily: "Montserrat",
-                                  fontSize: 10),
+                                  fontSize:12),
                             )
                           ],
                         ),

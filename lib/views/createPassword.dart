@@ -45,7 +45,7 @@ class _CreatePasswordState extends State<CreatePassword> {
         fillColor: Colors.white,
         hintStyle: TextStyle(color: Colors.white),
         labelText: 'Enter Password',
-        labelStyle: TextStyle(color: Colors.white),
+        labelStyle: TextStyle(color: Colors.white, fontFamily: "Montserrat", fontWeight: FontWeight.w200),
         enabledBorder:
             UnderlineInputBorder(borderSide: BorderSide(color: Colors.white54)),
         focusedBorder:
@@ -65,7 +65,7 @@ class _CreatePasswordState extends State<CreatePassword> {
         fillColor: Colors.white,
         // hintStyle: TextStyle(color:Colors.white),
         labelText: 'Repeat Password',
-        labelStyle: TextStyle(color: Colors.white),
+        labelStyle: TextStyle(color: Colors.white, fontFamily: "Montserrat", fontWeight: FontWeight.w200),
          suffixIcon: IconButton(
           onPressed: () {
             setState(() {
@@ -127,7 +127,7 @@ class _CreatePasswordState extends State<CreatePassword> {
               ),
               passwordField,
               SizedBox(
-                height: 15,
+                height: 20,
               ),
               repeatPasswordField,
               SizedBox(

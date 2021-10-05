@@ -86,7 +86,6 @@ class _BuyCoinState extends State<BuyCoin> {
                           Row(
                             children: [
                               Flexible(
-                                flex: 2,
                                 child: TextField(
                                   controller: _controller,
                                   decoration: InputDecoration(
@@ -188,8 +187,8 @@ class _BuyCoinState extends State<BuyCoin> {
                               builder: (BuildContext context) => Proof()));
                     },
                     child: Text(
-                      'BUY',
-                      style: TextStyle(color: Colors.white, fontSize: 17),
+                      'Proceed',
+                      style: TextStyle(color: Colors.white, fontSize: 17, fontFamily: "Montserrat", fontWeight: FontWeight.w300 ),
                     ),
                     color: kPrimaryColor,
                   ),

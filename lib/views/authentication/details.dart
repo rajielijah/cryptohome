@@ -20,7 +20,7 @@ class DetailsScreen extends StatelessWidget {
           labelText: 'Email',
           floatingLabelBehavior: FloatingLabelBehavior.auto,
            border: UnderlineInputBorder(  ),
-           labelStyle: TextStyle(color:Colors.white),
+           labelStyle: TextStyle(color:Colors.white, fontFamily: "Montserrat", fontWeight: FontWeight.w100),
           contentPadding:
               new EdgeInsets.symmetric(vertical: 0, horizontal: 1.0),
          enabledBorder: UnderlineInputBorder(
@@ -39,7 +39,7 @@ class DetailsScreen extends StatelessWidget {
         minLines: 1,
         decoration: InputDecoration(
           labelText: 'First name',
-           labelStyle: TextStyle(color:Colors.white),
+           labelStyle: TextStyle(color:Colors.white, fontFamily: "Montserrat", fontWeight: FontWeight.w200),
           contentPadding:
               new EdgeInsets.symmetric(vertical: 0, horizontal: 1.0),
         enabledBorder: UnderlineInputBorder(
@@ -60,7 +60,7 @@ class DetailsScreen extends StatelessWidget {
         minLines: 1,
         decoration: InputDecoration(
           labelText: 'Last name',
-           labelStyle: TextStyle(color:Colors.white),
+           labelStyle: TextStyle(color:Colors.white, fontFamily: "Montserrat", fontWeight: FontWeight.normal),
           contentPadding:
               new EdgeInsets.symmetric(vertical: 0, horizontal: 1.0),
         enabledBorder: UnderlineInputBorder(
@@ -96,7 +96,7 @@ class DetailsScreen extends StatelessWidget {
                     color: Colors.white,
                     fontSize: 20,
                     letterSpacing: 0.9,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
               ),
@@ -112,9 +112,9 @@ class DetailsScreen extends StatelessWidget {
               ),
               SizedBox(height: height/5,),
               EmailField,
-              SizedBox(height: 15,),
+              SizedBox(height: 20,),
               firstNameField,
-              SizedBox(height: 15,),
+              SizedBox(height: 20,),
               lastNameField,
                 SizedBox(height: height/7,),
                 Row(

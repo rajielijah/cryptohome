@@ -32,7 +32,7 @@ class _LoginScreenState extends State<LoginScreen> {
          style: TextStyle(color: Colors.white),
         decoration: InputDecoration(
           labelText: 'Email',
-          labelStyle: TextStyle(color: Colors.white),
+          labelStyle: TextStyle(color: Colors.white, fontFamily: "Montserrat", fontWeight: FontWeight.w200),
           contentPadding:
               new EdgeInsets.symmetric(vertical: 0, horizontal: 1.0),
           enabledBorder:
@@ -46,7 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
     final passwordField = TextFormField(
         autofocus: false,
         obscureText: _passwordVisible,
-         style: TextStyle(color: Colors.white),
+         style: TextStyle(color: Colors.white, fontFamily: "Montserrat", fontWeight: FontWeight.w200),
         // onSaved: (value) => _password = value,
         validator: (value) => value!.isEmpty ? "Please enter password" : null,
         maxLines: 1,
@@ -96,7 +96,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     color: Colors.white,
                     fontSize: 20,
                     letterSpacing: 0.5,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
               ),

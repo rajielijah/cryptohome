@@ -21,7 +21,7 @@ class SellListCoin extends StatelessWidget {
           children: [
             SizedBox(height: 35,),
             Text(
-              "Select your preferred coin",
+              "Select preferred coin to sell",
               style: TextStyle(
                   fontFamily: 'Montserrat',
                   fontSize: 15,

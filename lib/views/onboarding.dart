@@ -49,7 +49,7 @@ class Onboarding extends StatelessWidget {
                   height: height / 8,
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(18.0),
                   child: Container(
                     child: FlatButton(
                       minWidth: width,
@@ -68,13 +68,14 @@ class Onboarding extends StatelessWidget {
                     ),
                   ),
                 ),
+
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
                       'Have an Account?',
                       style: TextStyle(
-                          color: Colors.white,
+                          color: Colors.white54,
                           fontFamily: 'Montserrat',
                           fontSize: 14,
                           fontWeight: FontWeight.normal),

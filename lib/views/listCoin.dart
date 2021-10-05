@@ -20,7 +20,7 @@ class ListCoin extends StatelessWidget {
           children: [
             SizedBox(height: 35,),
             Text(
-              "Select your preferred coin",
+              "Select preferred coin to buys",
               style: TextStyle(
                   fontFamily: 'Montserrat',
                   fontSize: 15,
@@ -153,7 +153,7 @@ class ListCoin extends StatelessWidget {
                 width: width,
                 color: kPrimaryColor.withGreen(5),
                 child: ListTile(
-                  leading: SvgPicture.asset('assets/images/bnb.svg'),
+                  leading: Image.asset('assets/images/bnb.png', height: 30, width: 30,),
                   title: Row(
                     children: [
                       Text(

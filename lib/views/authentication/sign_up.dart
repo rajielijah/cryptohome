@@ -41,7 +41,7 @@ class _SignUpState extends State<SignUp> {
               Padding(
                 padding: const EdgeInsets.only(left: 18.0, right: 18),
                 child: Text(
-                  "Sign up to start",
+                  "Enter your phone number",
                   style: TextStyle(
                       fontFamily: 'Montserrat',
                       fontWeight: FontWeight.w600,
@@ -173,12 +173,12 @@ class _SignUpState extends State<SignUp> {
                               });
                         },
                     child: Container(
-                      width: 130,
-                      height: 60,
+                      width: 160,
+                      height: 70,
                       decoration: BoxDecoration(
                           color: kPrimaryColor[10],
                           borderRadius: BorderRadius.circular(30)),
-                      child: Icon(Icons.arrow_forward),
+                      child: Icon(Icons.arrow_forward, size:32 ),
                     ),
                   ),
                  
