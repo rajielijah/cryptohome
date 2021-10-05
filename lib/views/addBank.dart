@@ -26,7 +26,9 @@ class _AddBankState extends State<AddBank> {
            focusedBorder: UnderlineInputBorder(
             borderSide:
                 new BorderSide(color: Colors.white54, style: BorderStyle.solid)),
-          hintText: ''),
+          labelText: 'Account Number',
+          labelStyle: TextStyle(fontFamily:"Montserrat", fontWeight: FontWeight.w100, color: Colors.white)
+          ),
       
     );
 
@@ -44,7 +46,8 @@ class _AddBankState extends State<AddBank> {
            focusedBorder: UnderlineInputBorder(
             borderSide:
                 new BorderSide(color: Colors.white54, style: BorderStyle.solid)),
-          hintText: ''),
+          labelText: 'Account Name',
+          labelStyle: TextStyle(fontFamily:"Montserrat", fontWeight: FontWeight.w100, color: Colors.white)),
     );
     final cvvField = TextFormField(
       autofocus: false,
@@ -58,6 +61,8 @@ class _AddBankState extends State<AddBank> {
            focusedBorder: UnderlineInputBorder(
             borderSide:
                 new BorderSide(color: Colors.white54, style: BorderStyle.solid)),
+          labelText: 'Bank Name',
+          labelStyle: TextStyle(fontFamily:"Montserrat", fontWeight: FontWeight.w100, color: Colors.white)
          ),
     );
 
@@ -91,7 +96,7 @@ class _AddBankState extends State<AddBank> {
                           Padding(
                             padding: const EdgeInsets.all(18.0),
                             child: Container(
-                              height: height / 1.45,
+                              height: height / 1.75,
                               width: width,
                               decoration: BoxDecoration(
                                 color: kPrimaryColor,borderRadius: BorderRadius.circular(20)
@@ -117,7 +122,7 @@ class _AddBankState extends State<AddBank> {
                                     Text(
                                       'Fill in you card details',
                                       style: TextStyle(
-                                          color: kColor[10],
+                                          color: kPColor[10],
                                           fontFamily: 'Montserrat',
                                                       fontWeight: FontWeight.w400,
                                           letterSpacing: 0.7),
@@ -125,13 +130,13 @@ class _AddBankState extends State<AddBank> {
                                     SizedBox(
                                       height: height / 45,
                                     ),
-                                    Text(
-                                      'Account Number',
-                                      style: TextStyle(
-                                          fontFamily: 'Montserrat',
-                                          color: Colors.white,
-                                                      fontWeight: FontWeight.w600, fontSize: 18),
-                                    ),
+                                    // Text(
+                                    //   'Account Number',
+                                    //   style: TextStyle(
+                                    //       fontFamily: 'Montserrat',
+                                    //       color: Colors.white,
+                                    //                   fontWeight: FontWeight.w600, fontSize: 18),
+                                    // ),
                                     // SizedBox(
                                     //   height: height / 80,
                                     // ),
@@ -139,13 +144,13 @@ class _AddBankState extends State<AddBank> {
                                     SizedBox(
                                       height: height / 25,
                                     ),
-                                    Text(
-                                      'Account Name',
-                                      style: TextStyle(
-                                          fontFamily: 'Montserrat',
-                                          color: Colors.white,
-                                                      fontWeight: FontWeight.w400, fontSize: 18),
-                                    ),
+                                    // Text(
+                                    //   'Account Name',
+                                    //   style: TextStyle(
+                                    //       fontFamily: 'Montserrat',
+                                    //       color: Colors.white,
+                                    //                   fontWeight: FontWeight.w400, fontSize: 18),
+                                    // ),
                                     // SizedBox(
                                     //   height: height / 80,
                                     // ),
@@ -153,12 +158,12 @@ class _AddBankState extends State<AddBank> {
                                     SizedBox(
                                       height: height / 25,
                                     ),
-                                    Text(
-                                      'Bank Name',
-                                      style: TextStyle(color: Colors.white,
-                                          fontFamily: 'Montserrat',
-                                                      fontWeight: FontWeight.w400, fontSize: 18),
-                                    ),
+                                    // Text(
+                                    //   'Bank Name',
+                                    //   style: TextStyle(color: Colors.white,
+                                    //       fontFamily: 'Montserrat',
+                                    //                   fontWeight: FontWeight.w400, fontSize: 18),
+                                    // ),
                                     // SizedBox(
                                     //   height: height / 80,
                                     // ),

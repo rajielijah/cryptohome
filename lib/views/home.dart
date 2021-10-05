@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
         child: SafeArea(
           child: Container(
             height: height,
-              color: kPrimaryColor,
+              color: Colors.white,
               child: Column(
                 children: [
                   Padding(
@@ -39,7 +39,7 @@ class HomePage extends StatelessWidget {
                             Text(
                               '\$2,509.75',
                               style: TextStyle(
-                                  color: Colors.white,
+                                  color: kPrimaryColor,
                               fontFamily: 'Montserrat',
                             fontWeight: FontWeight.w600,
                                   letterSpacing: 0.7,
@@ -80,7 +80,7 @@ class HomePage extends StatelessWidget {
                               child: Text(
                                 '\$1320',
                                 style: TextStyle(
-                                    color: Colors.white,
+                                    color: kPrimaryColor,
                                     fontFamily: 'Montserrat',
                                 fontWeight: FontWeight.w600,
                                     fontSize: 20),
@@ -106,7 +106,7 @@ class HomePage extends StatelessWidget {
                               child: Text(
                                 '\$320',
                                 style: TextStyle(
-                                    color: Colors.white,
+                                    color: kPrimaryColor,
                                     fontFamily: 'Montserrat',
                                 fontWeight: FontWeight.w600,
                                     fontSize: 20),
@@ -127,7 +127,7 @@ class HomePage extends StatelessWidget {
                      Container(
                        height:160,
                        width: 160,
-                       color:kPColor.withOpacity(0.1),
+                       color:kColor.withOpacity(0.2),
                        child: Column(
                          children: [
                            Padding(
@@ -138,7 +138,7 @@ class HomePage extends StatelessWidget {
                                children: [
                                   Image.asset('assets/images/me.png', height: 25,),
                                   SizedBox(width: 20,),
-                                  Text("Bitcoin",style: TextStyle(color: Colors.white54, fontFamily:"Montserrat"),)
+                                  Text("Bitcoin",style: TextStyle(color: Colors.orange, fontFamily:"Montserrat"),)
                                ],
                              ),
                            ),
@@ -150,7 +150,7 @@ class HomePage extends StatelessWidget {
                             Text(
                               'Buy Rate: ',
                               style: TextStyle(
-                                  color: Colors.white54,
+                                  color: kPrimaryColor,
                                   fontWeight: FontWeight.normal,
                                   fontFamily: "Montserrat", fontSize: 12),
                             ),
@@ -172,7 +172,7 @@ class HomePage extends StatelessWidget {
                             Text(
                               'Sell rate: ',
                               style: TextStyle(
-                                  fontWeight: FontWeight.normal, fontFamily: 'Montserrat', fontSize: 12, color: Colors.white54),
+                                  fontWeight: FontWeight.normal, fontFamily: 'Montserrat', fontSize: 12, color: kPrimaryColor),
                             ),
                             Text(
                               ' 530',
@@ -194,7 +194,7 @@ class HomePage extends StatelessWidget {
                      Container(
                        height:160,
                        width: 160,
-                       color:kPColor.withOpacity(0.1),
+                       color:kColor.withOpacity(0.2),
                        child: Column(
                          children: [
                            Padding(
@@ -205,7 +205,7 @@ class HomePage extends StatelessWidget {
                                children: [
                                  SvgPicture.asset('assets/images/eth.svg'),
                                   SizedBox(width: 20,),
-                                  Text("Ethereum",style: TextStyle(color: Colors.white54, fontFamily:"Montserrat"),)
+                                  Text("Ethereum",style: TextStyle(color: Colors.blue, fontFamily:"Montserrat"),)
                                ],
                              ),
                            ),
@@ -217,7 +217,7 @@ class HomePage extends StatelessWidget {
                             Text(
                               'Buy Rate: ',
                               style: TextStyle(
-                                  color: Colors.white54,
+                                  color: kPrimaryColor,
                                   fontWeight: FontWeight.normal,
                                   fontFamily: "Montserrat", fontSize:12),
                             ),
@@ -239,7 +239,7 @@ class HomePage extends StatelessWidget {
                             Text(
                               'Sell rate: ',
                               style: TextStyle(
-                                  fontWeight: FontWeight.normal, fontFamily: 'Montserrat', fontSize:12, color: Colors.white54),
+                                  fontWeight: FontWeight.normal, fontFamily: 'Montserrat', fontSize:12, color: kPrimaryColor),
                             ),
                             Text(
                               ' 530',
@@ -269,7 +269,7 @@ class HomePage extends StatelessWidget {
                      Container(
                        height:160,
                        width: 160,
-                       color:kPColor.withOpacity(0.1),
+                       color:kColor.withOpacity(0.2),
                        child: Column(
                          children: [
                            Padding(
@@ -280,7 +280,7 @@ class HomePage extends StatelessWidget {
                                children: [
                                   Image.asset('assets/images/btc.png', height: 25,),
                                   SizedBox(width: 20,),
-                                  Text("Binance",style: TextStyle(color: Colors.white54, fontFamily:"Montserrat"),)
+                                  Text("Binance",style: TextStyle(color: Colors.black, fontFamily:"Montserrat"),)
                                ],
                              ),
                            ),
@@ -292,7 +292,7 @@ class HomePage extends StatelessWidget {
                             Text(
                               'Buy Rate: ',
                               style: TextStyle(
-                                  color: Colors.white54,
+                                  color: kPrimaryColor,
                                   fontWeight: FontWeight.normal,
                                   fontFamily: "Montserrat", fontSize:12),
                             ),
@@ -314,7 +314,7 @@ class HomePage extends StatelessWidget {
                             Text(
                               'Sell rate: ',
                               style: TextStyle(
-                                  fontWeight: FontWeight.normal, fontFamily: 'Montserrat', fontSize:12, color: Colors.white54),
+                                  fontWeight: FontWeight.normal, fontFamily: 'Montserrat', fontSize:12, color: kPrimaryColor),
                             ),
                             Text(
                               ' 530',
@@ -336,7 +336,7 @@ class HomePage extends StatelessWidget {
                      Container(
                        height:160,
                        width: 160,
-                       color:kPColor.withOpacity(0.1),
+                       color:kColor.withOpacity(0.2),
                        child: Column(
                          children: [
                            Padding(
@@ -347,7 +347,7 @@ class HomePage extends StatelessWidget {
                                children: [
                                  SvgPicture.asset('assets/images/usdt.svg'),
                                   SizedBox(width: 20,),
-                                  Text("Tether",style: TextStyle(color: Colors.white54, fontFamily:"Montserrat"),)
+                                  Text("Tether",style: TextStyle(color: Colors.green, fontFamily:"Montserrat"),)
                                ],
                              ),
                            ),
@@ -359,7 +359,7 @@ class HomePage extends StatelessWidget {
                             Text(
                               'Buy Rate: ',
                               style: TextStyle(
-                                  color: Colors.white54,
+                                  color: kPrimaryColor,
                                   fontWeight: FontWeight.normal,
                                   fontFamily: "Montserrat", fontSize:12),
                             ),
@@ -381,7 +381,7 @@ class HomePage extends StatelessWidget {
                             Text(
                               'Sell rate: ',
                               style: TextStyle(
-                                  fontWeight: FontWeight.normal, fontFamily: 'Montserrat', fontSize:12, color: Colors.white54),
+                                  fontWeight: FontWeight.normal, fontFamily: 'Montserrat', fontSize:12, color: kPrimaryColor),
                             ),
                             Text(
                               ' 530',
@@ -432,7 +432,7 @@ class HomePage extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 SvgPicture.asset('assets/images/arrow-left.svg'),
-                                Text('Sell', style: TextStyle(fontFamily: "Montserrat", fontWeight: FontWeight.w300),)
+                                Text('Sell', style: TextStyle(fontFamily: "Montserrat", color: Colors.white, fontWeight: FontWeight.w300),)
                               ],
                             )
                           ),

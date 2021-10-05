@@ -26,45 +26,45 @@ class ProfileScreen extends StatelessWidget {
           height: height,
           child: Column(
             children: [
-              Stack(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(15.0),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        CircleAvatar(
-                          child: SvgPicture.asset('assets/images/profile.svg'),
-                          radius: 40,
-                        ),
-                        SizedBox(width: width/7,),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Bentom@gmail.com',
-                              style: TextStyle(
-                                  color: Colors.white54,
-                                  fontWeight: FontWeight.normal,
-                                  fontSize: 14,
-                                  fontFamily: 'Montserrat'),
-                            ),
-                            Text(
-                              '+2341 9977118',
-                              style: TextStyle(
-                                  color: Colors.white54,
-                                  fontWeight: FontWeight.normal,
-                                  fontSize: 14,
-                                  fontFamily: 'Montserrat'),
-                            )
-                          ],
-                        ),
-                      ],
+                Container(
+                  height: 90,
+                  child: Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          CircleAvatar(
+                            child: SvgPicture.asset('assets/images/profile.svg'),
+                            radius: 40,
+                          ),
+                          SizedBox(width: width/7,),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Bentom@gmail.com',
+                                style: TextStyle(
+                                    color: Colors.white54,
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 14,
+                                    fontFamily: 'Montserrat'),
+                              ),
+                              Text(
+                                '+2341 9977118',
+                                style: TextStyle(
+                                    color: Colors.white54,
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 14,
+                                    fontFamily: 'Montserrat'),
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                ],
-              ),
+                ),
+                
               Padding(
                 padding: const EdgeInsets.all(18.0),
                 child: Align(
@@ -79,23 +79,26 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              GestureDetector(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileDetails()));
-                },
-                child: profile(
-                    context,
-                    SvgPicture.asset('assets/images/pro6.svg'),
-                    Text(
-                      'Profile details',
-                      style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.white),
+              Container(
+                child: Column(
+                  children: [
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileDetails()));
+                      },
+                      child: profile(
+                          context,
+                          SvgPicture.asset('assets/images/pro6.svg'),
+                          Text(
+                            'Profile details',
+                            style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white),
+                          ),
+                          Icon(Icons.arrow_forward_ios_sharp, color: Colors.white)),
                     ),
-                    Icon(Icons.arrow_forward_ios_sharp, color: Colors.white)),
-              ),
-              GestureDetector(
+                     GestureDetector(
                 onTap: () {
                   Navigator.push(
                       context,
@@ -197,6 +200,10 @@ class ProfileScreen extends StatelessWidget {
                       )),
                 ),
               )
+                  ],
+                ),
+              ),
+             
             ],
           ),
         ),
