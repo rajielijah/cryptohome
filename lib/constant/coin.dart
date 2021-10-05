@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 
-Widget coin(BuildContext context, Widget image, Text title, Text subtitle, SvgPicture chart,  Text price, Text percent){
+Widget coin(BuildContext context, Widget image, Text title, Text subtitle, Widget chart, Widget price, Widget percent){
    var height = MediaQuery.of(context).size.height;
     var width  = MediaQuery.of(context).size.width;
   return Padding(
@@ -27,7 +27,8 @@ Widget coin(BuildContext context, Widget image, Text title, Text subtitle, SvgPi
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                title, subtitle
+                title, 
+                subtitle
               ],
             ),
             chart,

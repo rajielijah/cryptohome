@@ -46,15 +46,16 @@ class _BuyCoinState extends State<BuyCoin> {
                         Text('BTC'),
                         SvgPicture.asset('assets/images/chart.svg'),
                         Text(""),
-                        Text("")),
+                        Text("")
+                        ),
                   ),
-                  SizedBox(height: height / 17),
+                  SizedBox(height: height / 25),
                   Container(
                     height: 200,
                     width: width,
                     decoration: BoxDecoration(
                       color: kPrimaryColor,
-                      borderRadius: BorderRadius.circular(20)
+                      borderRadius: BorderRadius.circular(10)
                     ),
                     child: Padding(
                       padding: const EdgeInsets.all(18.0),
@@ -67,34 +68,39 @@ class _BuyCoinState extends State<BuyCoin> {
                               Text(
                                 'You buy',
                                 style: TextStyle(
+                                  fontSize: 19,
                                   color: Colors.white54,
                                   fontFamily: "Montserrat",
                                   fontWeight: FontWeight.normal,
                                 ),
                               ),
-                              SizedBox(width: width / 2.35),
+                              SizedBox(width: width / 4),
                               Text(
                                 'In',
                                 style: TextStyle(
                                     color: Colors.white54,
+                                    
                                     fontFamily: "Montserrat",
                                     fontWeight: FontWeight.normal,
-                                    fontSize: 15),
+                                    fontSize: 19),
                               ),
                             ],
                           ),
+                          SizedBox(height: 10,),
                           Row(
                             children: [
                               Flexible(
                                 child: TextField(
                                   controller: _controller,
                                   decoration: InputDecoration(
-                                      border: UnderlineInputBorder(),
-                                      hintText: '1500',
+                                      border: UnderlineInputBorder(
+                                        borderSide: BorderSide(color: Colors.black)
+                                      ),
+                                      hintText: 'BTC',
                                       hintStyle:
                                           TextStyle(color: Colors.white)),
                                   style: TextStyle(
-                                      fontSize: 14, color: Colors.white),
+                                      fontSize: 16, color: Colors.white),
                                   autofocus: true,
                                   readOnly: _readOnly,
                                 ),
@@ -102,20 +108,22 @@ class _BuyCoinState extends State<BuyCoin> {
                               SizedBox(width: 30),
                               Flexible(
                                 child: TextField(
-                                    controller: _controller,
+                                    // controller: _controller,
                                     decoration: InputDecoration(
-                                        border: UnderlineInputBorder(),
-                                        hintText: '1500',
+                                  
+                                        // border: UnderlineInputBorder(
+                                        //   borderSide: BorderSide(color: Colors.white)
+                                        // ),
+                                        hintText: 'Naira N',
                                         hintStyle:
-                                            TextStyle(color: Colors.white)),
+                                            TextStyle(color: Colors.white, fontFamily: "Montserrat")),
                                     style: TextStyle(
-                                        fontSize: 14, color: Colors.white),
+                                        fontSize: 16, color: Colors.white),
                                     autofocus: true,
                                     readOnly: _readOnly,
                                   ),
                               ),
-                              
-                            ],
+                              ],
                           ),
                           SizedBox(
                             height: 15

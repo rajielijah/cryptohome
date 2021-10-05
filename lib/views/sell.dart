@@ -68,6 +68,7 @@ class _SellCoinState extends State<SellCoin> {
                                 'You sell',
                                 style: TextStyle(
                                   color: Colors.white54,
+                                  fontSize: 19,
                                   fontFamily: "Montserrat",
                                   fontWeight: FontWeight.normal,
                                 ),
@@ -79,14 +80,14 @@ class _SellCoinState extends State<SellCoin> {
                                     color: Colors.white54,
                                     fontFamily: "Montserrat",
                                     fontWeight: FontWeight.normal,
-                                    fontSize: 15),
+                                    fontSize: 19),
                               ),
                             ],
                           ),
                           Row(
                             children: [
                               Flexible(
-                                flex: 2,
+                                // flex: 2,
                                 child: TextField(
                                   controller: _controller,
                                   decoration: InputDecoration(

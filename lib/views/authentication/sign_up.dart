@@ -173,12 +173,12 @@ class _SignUpState extends State<SignUp> {
                               });
                         },
                     child: Container(
-                      width: 160,
-                      height: 70,
+                      width: 170,
+                      height: 60,
                       decoration: BoxDecoration(
                           color: kPrimaryColor[10],
                           borderRadius: BorderRadius.circular(30)),
-                      child: Icon(Icons.arrow_forward, size:32 ),
+                      child: Icon(Icons.arrow_forward, ),
                     ),
                   ),
                  

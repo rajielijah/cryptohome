@@ -154,7 +154,7 @@ class SellListCoin extends StatelessWidget {
                 width: width,
                 color: kPrimaryColor.withGreen(5),
                 child: ListTile(
-                  leading: SvgPicture.asset('assets/images/bnb.svg'),
+                  leading: Image.asset('assets/images/bnb.png'),
                   title: Row(
                     children: [
                       Text(
